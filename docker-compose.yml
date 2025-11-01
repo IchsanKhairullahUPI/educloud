@@ -1,77 +1,107 @@
-version: "3.9"
+version: '3.9'
+
 services:
+  # ==========================
+  # Microsoft SQL Server
+  # ==========================
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: educloud-mssql
+    environment:
+      SA_PASSWORD: "YourStrong!Passw0rd"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    volumes:
+      - ./databases/mssql:/var/opt/mssql
+    networks:
+      - educloud-net
+
+  # ==========================
+  # MongoDB (for future analytics)
+  # ==========================
+  mongo:
+    image: mongo:7
+    container_name: educloud-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./databases/mongo:/data/db
+    networks:
+      - educloud-net
+
+  # ==========================
+  # Auth Service
+  # ==========================
   auth-service:
     build: ./services/auth-service
-    env_file: ./shared/.envs/auth.env
+    container_name: educloud-auth
     ports:
       - "8001:8000"
+    environment:
+      - APP_NAME=AuthService
+      - APP_ENV=local
+      - APP_KEY=base64:SomeRandomKey
+      - APP_DEBUG=true
+      - DB_CONNECTION=sqlsrv
+      - DB_HOST=mssql
+      - DB_PORT=1433
+      - DB_DATABASE=auth_db
+      - DB_USERNAME=sa
+      - DB_PASSWORD=YourStrong!Passw0rd
     depends_on:
-      - db
+      - mssql
     networks:
-      - educloud
+      - educloud-net
 
+  # ==========================
+  # Quiz Service
+  # ==========================
   quiz-service:
     build: ./services/quiz-service
-    env_file: ./shared/.envs/quiz.env
+    container_name: educloud-quiz
     ports:
       - "8002:8000"
+    environment:
+      - APP_NAME=QuizService
+      - APP_ENV=local
+      - APP_KEY=base64:SomeRandomKey
+      - APP_DEBUG=true
+      - DB_CONNECTION=sqlsrv
+      - DB_HOST=mssql
+      - DB_PORT=1433
+      - DB_DATABASE=quiz_db
+      - DB_USERNAME=sa
+      - DB_PASSWORD=YourStrong!Passw0rd
     depends_on:
-      - db
+      - mssql
     networks:
-      - educloud
+      - educloud-net
 
-  session-service:
-    build: ./services/session-service
-    env_file: ./shared/.envs/session.env
+  # ==========================
+  # Question Bank Service
+  # ==========================
+  qbank-service:
+    build: ./services/qbank-service
+    container_name: educloud-qbank
     ports:
       - "8003:8000"
-    depends_on:
-      - redis
-    networks:
-      - educloud
-
-  leaderboard-service:
-    build: ./services/leaderboard-service
-    env_file: ./shared/.envs/leaderboard.env
-    ports:
-      - "8004:8000"
-    networks:
-      - educloud
-
-  ai-question-service:
-    build: ./services/ai-question-service
-    env_file: ./shared/.envs/ai.env
-    ports:
-      - "8005:8000"
-    networks:
-      - educloud
-
-  analytics-service:
-    build: ./services/analytics-service
-    env_file: ./shared/.envs/analytics.env
-    ports:
-      - "8006:8000"
-    networks:
-      - educloud
-
-  db:
-    image: postgres:16
     environment:
-      POSTGRES_USER: admin
-      POSTGRES_PASSWORD: admin
-      POSTGRES_DB: educloud
-    ports:
-      - "5432:5432"
+      - APP_NAME=QBankService
+      - APP_ENV=local
+      - APP_KEY=base64:SomeRandomKey
+      - APP_DEBUG=true
+      - DB_CONNECTION=sqlsrv
+      - DB_HOST=mssql
+      - DB_PORT=1433
+      - DB_DATABASE=qbank_db
+      - DB_USERNAME=sa
+      - DB_PASSWORD=YourStrong!Passw0rd
+    depends_on:
+      - mssql
     networks:
-      - educloud
-
-  redis:
-    image: redis:7
-    ports:
-      - "6379:6379"
-    networks:
-      - educloud
+      - educloud-net
 
 networks:
-  educloud:
+  educloud-net:
     driver: bridge
