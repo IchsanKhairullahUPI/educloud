@@ -1,25 +1,24 @@
-# Use PHP 8.3 + Composer + Nginx
+# auth-service/Dockerfile
+
 FROM php:8.3-fpm
 
-# Install system dependencies
+# Install required system packages
 RUN apt-get update && apt-get install -y \
     libpng-dev libonig-dev libxml2-dev zip unzip curl git \
-    && docker-php-ext-install pdo pdo_mysql pdo_sqlsrv sqlsrv
-
-# Install Composer
-COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
+    && docker-php-ext-install pdo pdo_mysql \
+    && rm -rf /var/lib/apt/lists/*
 
 # Set working directory
 WORKDIR /var/www
 
-# Copy source code
-COPY src/ .
+# Copy Laravel project (already has vendor locally)
+COPY src/ ./
 
-# Install dependencies
-RUN composer install --no-interaction --prefer-dist
+# Set permissions
+RUN chown -R www-data:www-data /var/www
 
-# Expose port
+# Expose port (can change if needed)
 EXPOSE 8000
 
-# Run Laravel's built-in server
-CMD php artisan serve --host=0.0.0.0 --port=8000
+# Run Laravel’s built-in server (for development)
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]

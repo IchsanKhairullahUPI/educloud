@@ -1,0 +1,17 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore local environment and cache
+.env
+*.log
+storage/
+bootstrap/cache/
+
+# Ignore dependencies
+vendor/
+node_modules/
+
+# Ignore git
+.git
+.gitignore
