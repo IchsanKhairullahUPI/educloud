@@ -157,7 +157,42 @@ services:
     volumes:
       - ./frontend:/var/www/html
     command: php artisan serve --host=0.0.0.0 --port=8000
+# ==========================
+  # Redis (Cache & Session)
+  # ==========================
+  redis:
+    image: redis:7-alpine
+    container_name: educloud-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./databases/redis:/data
+    networks:
+      - educloud-net
 
+# ==========================
+  # Leaderboard Service
+  # ==========================
+  leaderboard-service:
+    build:
+      context: ./services/leaderboard-service
+    container_name: educloud-leaderboard
+    ports:
+      - "8006:8000" # Asumsi port internal 8000, eksternal 8006
+    environment:
+      - APP_NAME=LeaderboardService
+      - APP_ENV=local
+      - APP_DEBUG=true
+      - DB_CONNECTION=mongodb
+      - DB_HOST=mongo # Nama service MongoDB di docker-compose
+      - DB_PORT=27017
+      - DB_DATABASE=leaderboard_db
+      # Tambahkan env lain yang Anda perlukan
+    depends_on:
+      - mongo
+    networks:
+      - educloud-net
+      
 networks:
   educloud-net:
     driver: bridge
