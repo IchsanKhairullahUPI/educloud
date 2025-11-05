@@ -18,5 +18,6 @@ class MediaController extends Controller
         return response()->json([
             'url' => asset('storage/' . $path)
         ]);
+        
     }
 }
