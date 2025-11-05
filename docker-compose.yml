@@ -8,14 +8,23 @@ services:
     image: mcr.microsoft.com/mssql/server:2022-latest
     container_name: educloud-mssql
     environment:
-      SA_PASSWORD: "YourStrong!Passw0rd"
-      ACCEPT_EULA: "Y"
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=passwordeducloud
+      - MSSQL_PID=Developer
+      - MSSQL_MEMORY_LIMIT_MB=2048
     ports:
       - "1433:1433"
     volumes:
-      - ./databases/mssql:/var/opt/mssql
+      - mssql_data:/var/opt/mssql
     networks:
       - educloud-net
+    healthcheck:
+      test: /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "passwordeducloud" -Q "SELECT 1" -b -o /dev/null
+      interval: 10s
+      timeout: 3s
+      retries: 10
+      start_period: 10s
+    restart: unless-stopped
 
   # ==========================
   # MongoDB (for future analytics)
@@ -48,7 +57,7 @@ services:
       - DB_PORT=1433
       - DB_DATABASE=auth_db
       - DB_USERNAME=sa
-      - DB_PASSWORD=YourStrong!Passw0rd
+      - DB_PASSWORD=passwordeducloud
     depends_on:
       - mssql
     networks:
@@ -105,3 +114,7 @@ services:
 networks:
   educloud-net:
     driver: bridge
+    
+volumes:
+  mssql_data:
+    driver: local

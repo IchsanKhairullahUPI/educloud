@@ -1,0 +1,1627 @@
+2025-11-04 14:07:55.709 | SQL Server 2022 will run as non-root by default.
+2025-11-04 14:07:55.714 | This container is running as user mssql.
+2025-11-04 14:07:55.714 | To learn more visit https://go.microsoft.com/fwlink/?linkid=2099216.
+2025-11-04 14:08:22.353 | ** ERROR: LSA initialization failed; ExitCode=0xc000004b
+2025-11-04 14:08:22.357 | ** ERROR: Failed to launch LSA; status=0xc000004b
+2025-11-04 14:08:22.358 | ** ERROR: [AppLoader] Failed to load LSA: 0xc000004b
+2025-11-04 14:08:22.359 | AppLoader: Exiting with status=0xc000004b
+2025-11-04 14:08:22.360 | This program has encountered a fatal error and cannot continue running at Tue Nov  4 07:08:22 2025
+2025-11-04 14:08:22.360 | The following diagnostic information is available:
+2025-11-04 14:08:22.360 | 
+2025-11-04 14:08:22.360 |          Reason: 0x00000006
+2025-11-04 14:08:22.360 |         Message: Termination of \SystemRoot\system32\AppLoader.exe was due to fatal error 0xC0000001
+2025-11-04 14:08:22.360 |         Address: 0x3fff8ea6a868
+2025-11-04 14:08:22.360 |     Stack Trace:
+2025-11-04 14:08:22.360 |                  file://package6/windows/system32/sqlpal.dll+0x0000000000209C12
+2025-11-04 14:08:22.360 |                  file://package6/windows/system32/sqlpal.dll+0x0000000000208156
+2025-11-04 14:08:22.360 |                  file://package6/windows/system32/sqlpal.dll+0x000000000026A9D0
+2025-11-04 14:08:22.360 |                  file://package6/windows/system32/sqlpal.dll+0x000000000026A868
+2025-11-04 14:08:22.360 |                  file://package6/windows/system32/sqlpal.dll+0x0000000000269296
+2025-11-04 14:08:22.360 |                  file://package6/windows/system32/sqlpal.dll+0x0000000000201F6E
+2025-11-04 14:08:22.361 |                  file://package6/windows/system32/sqlpal.dll+0x00000000003A02FB
+2025-11-04 14:08:22.361 |                  file:///windows/system32/ntdll.dll+0x00000000000F64AF
+2025-11-04 14:08:22.361 |                  file:///windows/system32/AppLoader.exe+0x0000000000002ED7
+2025-11-04 14:08:22.361 |                  file:///windows/system32/AppLoader.exe+0x000000000000301D
+2025-11-04 14:08:22.361 |                  file:///windows/system32/AppLoader.exe+0x000000000000303D
+2025-11-04 14:08:22.361 |                  file:///windows/system32/AppLoader.exe+0x000000000000A378
+2025-11-04 14:08:22.361 |                  file:///Windows/SYSTEM32/KERNEL32.DLL+0x0000000000017AF4
+2025-11-04 14:08:22.361 |                  file:///windows/system32/ntdll.dll+0x00000000000244A1
+2025-11-04 14:08:22.361 |         Process: 12 - sqlservr
+2025-11-04 14:08:22.361 |          Thread: 62 (application thread 0xc4)
+2025-11-04 14:08:22.361 |     Instance Id: 58eac966-2d7f-4a82-abaf-2b5a4a367acb
+2025-11-04 14:08:22.361 |        Crash Id: a00e2da4-a504-4451-83ed-3b2b310b62f3
+2025-11-04 14:08:22.361 |     Build stamp: d7bafc6b0e42778633d72e5ac92bd37cabb7a668e87cd9af1a1e19fd0c89f66d
+2025-11-04 14:08:22.361 |    Distribution: Ubuntu 22.04.5 LTS
+2025-11-04 14:08:22.361 |      Processors: 8
+2025-11-04 14:08:22.361 |    Total Memory: 3775688704 bytes
+2025-11-04 14:08:22.361 |       Timestamp: Tue Nov  4 07:08:22 2025
+2025-11-04 14:08:22.421 | Capturing a dump of 12
+2025-11-04 14:08:22.788 | FAILED to capture a dump. Details in paldumper log.
+2025-11-04 14:08:22.830 | 
+2025-11-04 14:08:23.724 | Ubuntu 22.04.5 LTS
+2025-11-04 14:08:23.746 | Capturing core dump and information to /var/opt/mssql/log...
+2025-11-04 14:08:23.885 | /opt/mssql/bin/crash-support-functions.sh: line 459: echo: write error: Input/output error
+2025-11-04 14:08:23.917 | /opt/mssql/bin/crash-support-functions.sh: line 459: echo: write error: Input/output error
+2025-11-04 14:08:23.942 | /opt/mssql/bin/crash-support-functions.sh: line 461: echo: write error: Input/output error
+2025-11-04 14:08:23.953 | /opt/mssql/bin/crash-support-functions.sh: line 459: echo: write error: Input/output error
+2025-11-04 14:08:23.975 | /opt/mssql/bin/crash-support-functions.sh: line 461: echo: write error: Input/output error
+2025-11-04 14:08:24.037 | /opt/mssql/bin/crash-support-functions.sh: line 459: echo: write error: Input/output error
+2025-11-04 14:08:24.233 | /opt/mssql/bin/crash-support-functions.sh: line 461: echo: write error: Input/output error
+2025-11-04 14:08:24.315 | /opt/mssql/bin/crash-support-functions.sh: line 471: echo: write error: Input/output error
+2025-11-04 14:08:24.319 | /bin/cat: /proc/12/maps: Permission denied
+2025-11-04 14:08:24.489 | /opt/mssql/bin/crash-support-functions.sh: line 477: echo: write error: Input/output error
+2025-11-04 14:08:24.497 | /opt/mssql/bin/crash-support-functions.sh: line 492: echo: write error: Input/output error
+2025-11-04 14:08:24.504 | /opt/mssql/bin/crash-support-functions.sh: line 494: echo: write error: Input/output error
+2025-11-04 14:08:24.514 | /opt/mssql/bin/crash-support-functions.sh: line 495: echo: write error: Input/output error
+2025-11-04 14:08:24.789 | grep: write error: Input/output error
+2025-11-04 14:08:24.797 | /opt/mssql/bin/crash-support-functions.sh: line 497: echo: write error: Input/output error
+2025-11-04 14:08:24.817 | /opt/mssql/bin/crash-support-functions.sh: line 459: echo: write error: Input/output error
+2025-11-04 14:08:24.845 | /opt/mssql/bin/crash-support-functions.sh: line 461: echo: write error: Input/output error
+2025-11-04 14:08:24.860 | /opt/mssql/bin/crash-support-functions.sh: line 459: echo: write error: Input/output error
+2025-11-04 14:08:24.883 | /opt/mssql/bin/crash-support-functions.sh: line 461: echo: write error: Input/output error
+2025-11-04 14:08:24.897 | /opt/mssql/bin/crash-support-functions.sh: line 459: echo: write error: Input/output error
+2025-11-04 14:08:24.929 | /opt/mssql/bin/crash-support-functions.sh: line 461: echo: write error: Input/output error
+2025-11-04 14:08:24.950 | /opt/mssql/bin/crash-support-functions.sh: line 459: echo: write error: Input/output error
+2025-11-04 14:08:24.980 | /opt/mssql/bin/crash-support-functions.sh: line 461: echo: write error: Input/output error
+2025-11-04 14:08:24.996 | /opt/mssql/bin/crash-support-functions.sh: line 459: echo: write error: Input/output error
+2025-11-04 14:08:25.019 | /opt/mssql/bin/crash-support-functions.sh: line 461: echo: write error: Input/output error
+2025-11-04 14:08:25.034 | /opt/mssql/bin/crash-support-functions.sh: line 459: echo: write error: Input/output error
+2025-11-04 14:08:25.060 | /opt/mssql/bin/crash-support-functions.sh: line 461: echo: write error: Input/output error
+2025-11-04 14:08:25.073 | /opt/mssql/bin/crash-support-functions.sh: line 459: echo: write error: Input/output error
+2025-11-04 14:08:25.095 | /opt/mssql/bin/crash-support-functions.sh: line 461: echo: write error: Input/output error
+2025-11-04 14:08:25.106 | /opt/mssql/bin/crash-support-functions.sh: line 459: echo: write error: Input/output error
+2025-11-04 14:08:25.130 | /opt/mssql/bin/crash-support-functions.sh: line 461: echo: write error: Input/output error
+2025-11-04 14:08:25.145 | /opt/mssql/bin/crash-support-functions.sh: line 459: echo: write error: Input/output error
+2025-11-04 14:08:25.167 | /opt/mssql/bin/crash-support-functions.sh: line 461: echo: write error: Input/output error
+2025-11-04 14:08:25.179 | /opt/mssql/bin/crash-support-functions.sh: line 459: echo: write error: Input/output error
+2025-11-04 14:08:25.201 | /opt/mssql/bin/crash-support-functions.sh: line 461: echo: write error: Input/output error
+2025-11-04 14:08:25.213 | /opt/mssql/bin/crash-support-functions.sh: line 459: echo: write error: Input/output error
+2025-11-04 14:08:25.266 | /opt/mssql/bin/crash-support-functions.sh: line 461: echo: write error: Input/output error
+2025-11-04 14:08:25.280 | /opt/mssql/bin/crash-support-functions.sh: line 459: echo: write error: Input/output error
+2025-11-04 14:08:25.775 | /opt/mssql/bin/crash-support-functions.sh: line 461: echo: write error: Input/output error
+2025-11-04 14:08:25.787 | /opt/mssql/bin/crash-support-functions.sh: line 459: echo: write error: Input/output error
+2025-11-04 14:08:25.799 | cat: /proc/12/environ: Permission denied
+2025-11-04 14:08:25.846 | /opt/mssql/bin/crash-support-functions.sh: line 461: echo: write error: Input/output error
+2025-11-04 14:08:25.865 | /opt/mssql/bin/crash-support-functions.sh: line 459: echo: write error: Input/output error
+2025-11-04 14:08:25.918 | /opt/mssql/bin/crash-support-functions.sh: line 461: echo: write error: Input/output error
+2025-11-04 14:08:25.935 | find: '/proc/12/task/12/fdinfo': Permission denied
+2025-11-04 14:08:25.942 | find: '/proc/12/task/14/fdinfo': Permission denied
+2025-11-04 14:08:25.945 | find: '/proc/12/task/15/fdinfo': Permission denied
+2025-11-04 14:08:25.949 | find: '/proc/12/task/16/fdinfo': Permission denied
+2025-11-04 14:08:25.953 | find: '/proc/12/task/17/fdinfo': Permission denied
+2025-11-04 14:08:25.957 | find: '/proc/12/task/18/fdinfo': Permission denied
+2025-11-04 14:08:25.960 | find: '/proc/12/task/19/fdinfo': Permission denied
+2025-11-04 14:08:25.964 | find: '/proc/12/task/20/fdinfo': Permission denied
+2025-11-04 14:08:25.967 | find: '/proc/12/task/21/fdinfo': Permission denied
+2025-11-04 14:08:25.971 | find: '/proc/12/task/22/fdinfo': Permission denied
+2025-11-04 14:08:25.976 | find: '/proc/12/task/23/fdinfo': Permission denied
+2025-11-04 14:08:25.979 | find: '/proc/12/task/24/fdinfo': Permission denied
+2025-11-04 14:08:25.982 | find: '/proc/12/task/25/fdinfo': Permission denied
+2025-11-04 14:08:25.986 | find: '/proc/12/task/26/fdinfo': Permission denied
+2025-11-04 14:08:25.992 | find: '/proc/12/task/27/fdinfo': Permission denied
+2025-11-04 14:08:25.995 | find: '/proc/12/task/28/fdinfo': Permission denied
+2025-11-04 14:08:25.998 | find: '/proc/12/task/29/fdinfo': Permission denied
+2025-11-04 14:08:26.001 | find: '/proc/12/task/30/fdinfo': Permission denied
+2025-11-04 14:08:26.010 | find: '/proc/12/task/31/fdinfo': Permission denied
+2025-11-04 14:08:26.013 | find: '/proc/12/task/32/fdinfo': Permission denied
+2025-11-04 14:08:26.014 | find: '/proc/12/task/33/fdinfo': Permission denied
+2025-11-04 14:08:26.017 | find: '/proc/12/task/34/fdinfo': Permission denied
+2025-11-04 14:08:26.019 | find: '/proc/12/task/35/fdinfo': Permission denied
+2025-11-04 14:08:26.025 | find: '/proc/12/task/36/fdinfo': Permission denied
+2025-11-04 14:08:26.029 | find: '/proc/12/task/37/fdinfo': Permission denied
+2025-11-04 14:08:26.031 | find: '/proc/12/task/38/fdinfo': Permission denied
+2025-11-04 14:08:26.033 | find: '/proc/12/task/39/fdinfo': Permission denied
+2025-11-04 14:08:26.035 | find: '/proc/12/task/40/fdinfo': Permission denied
+2025-11-04 14:08:26.038 | find: '/proc/12/task/41/fdinfo': Permission denied
+2025-11-04 14:08:26.041 | find: '/proc/12/task/42/fdinfo': Permission denied
+2025-11-04 14:08:26.046 | find: '/proc/12/task/43/fdinfo': Permission denied
+2025-11-04 14:08:26.049 | find: '/proc/12/task/44/fdinfo': Permission denied
+2025-11-04 14:08:26.051 | find: '/proc/12/task/45/fdinfo': Permission denied
+2025-11-04 14:08:26.053 | find: '/proc/12/task/46/fdinfo': Permission denied
+2025-11-04 14:08:26.056 | find: '/proc/12/task/47/fdinfo': Permission denied
+2025-11-04 14:08:26.059 | find: '/proc/12/task/48/fdinfo': Permission denied
+2025-11-04 14:08:26.062 | find: '/proc/12/task/50/fdinfo': Permission denied
+2025-11-04 14:08:26.065 | find: '/proc/12/task/51/fdinfo': Permission denied
+2025-11-04 14:08:26.067 | find: '/proc/12/task/52/fdinfo': Permission denied
+2025-11-04 14:08:26.069 | find: '/proc/12/task/54/fdinfo': Permission denied
+2025-11-04 14:08:26.071 | find: '/proc/12/task/55/fdinfo': Permission denied
+2025-11-04 14:08:26.073 | find: '/proc/12/task/56/fdinfo': Permission denied
+2025-11-04 14:08:26.075 | find: '/proc/12/task/57/fdinfo': Permission denied
+2025-11-04 14:08:26.077 | find: '/proc/12/task/58/fdinfo': Permission denied
+2025-11-04 14:08:26.079 | find: '/proc/12/task/59/fdinfo': Permission denied
+2025-11-04 14:08:26.082 | find: '/proc/12/task/60/fdinfo': Permission denied
+2025-11-04 14:08:26.084 | find: '/proc/12/task/61/fdinfo': Permission denied
+2025-11-04 14:08:26.087 | find: '/proc/12/task/62/fdinfo': Permission denied
+2025-11-04 14:08:26.090 | find: '/proc/12/task/63/fdinfo': Permission denied
+2025-11-04 14:08:26.092 | find: '/proc/12/task/64/fdinfo': Permission denied
+2025-11-04 14:08:26.094 | find: '/proc/12/task/71/fdinfo': Permission denied
+2025-11-04 14:08:26.095 | find: '/proc/12/map_files': Permission denied
+2025-11-04 14:08:26.095 | find: '/proc/12/fdinfo': Permission denied
+2025-11-04 14:08:26.112 | find: '/proc/12/task/12/fdinfo': Permission denied
+2025-11-04 14:08:26.114 | find: '/proc/12/task/14/fdinfo': Permission denied
+2025-11-04 14:08:26.115 | find: '/proc/12/task/15/fdinfo': Permission denied
+2025-11-04 14:08:26.116 | find: '/proc/12/task/16/fdinfo': Permission denied
+2025-11-04 14:08:26.117 | find: '/proc/12/task/17/fdinfo': Permission denied
+2025-11-04 14:08:26.118 | find: '/proc/12/task/18/fdinfo': Permission denied
+2025-11-04 14:08:26.122 | find: '/proc/12/task/19/fdinfo': Permission denied
+2025-11-04 14:08:26.126 | find: '/proc/12/task/20/fdinfo': Permission denied
+2025-11-04 14:08:26.129 | find: '/proc/12/task/21/fdinfo': Permission denied
+2025-11-04 14:08:26.131 | find: '/proc/12/task/22/fdinfo': Permission denied
+2025-11-04 14:08:26.132 | find: '/proc/12/task/23/fdinfo': Permission denied
+2025-11-04 14:08:26.134 | find: '/proc/12/task/24/fdinfo': Permission denied
+2025-11-04 14:08:26.135 | find: '/proc/12/task/25/fdinfo': Permission denied
+2025-11-04 14:08:26.137 | find: '/proc/12/task/26/fdinfo': Permission denied
+2025-11-04 14:08:26.143 | find: '/proc/12/task/27/fdinfo': Permission denied
+2025-11-04 14:08:26.146 | find: '/proc/12/task/28/fdinfo': Permission denied
+2025-11-04 14:08:26.148 | find: '/proc/12/task/29/fdinfo': Permission denied
+2025-11-04 14:08:26.149 | find: '/proc/12/task/30/fdinfo': Permission denied
+2025-11-04 14:08:26.150 | find: '/proc/12/task/31/fdinfo': Permission denied
+2025-11-04 14:08:26.152 | find: '/proc/12/task/32/fdinfo': Permission denied
+2025-11-04 14:08:26.153 | find: '/proc/12/task/33/fdinfo': Permission denied
+2025-11-04 14:08:26.156 | find: '/proc/12/task/34/fdinfo': Permission denied
+2025-11-04 14:08:26.159 | find: '/proc/12/task/35/fdinfo': Permission denied
+2025-11-04 14:08:26.160 | find: '/proc/12/task/36/fdinfo': Permission denied
+2025-11-04 14:08:26.162 | find: '/proc/12/task/37/fdinfo': Permission denied
+2025-11-04 14:08:26.164 | find: '/proc/12/task/38/fdinfo': Permission denied
+2025-11-04 14:08:26.165 | find: '/proc/12/task/39/fdinfo': Permission denied
+2025-11-04 14:08:26.166 | find: '/proc/12/task/40/fdinfo': Permission denied
+2025-11-04 14:08:26.167 | find: '/proc/12/task/41/fdinfo': Permission denied
+2025-11-04 14:08:26.169 | find: '/proc/12/task/42/fdinfo': Permission denied
+2025-11-04 14:08:26.170 | find: '/proc/12/task/43/fdinfo': Permission denied
+2025-11-04 14:08:26.173 | find: '/proc/12/task/44/fdinfo': Permission denied
+2025-11-04 14:08:26.175 | find: '/proc/12/task/45/fdinfo': Permission denied
+2025-11-04 14:08:26.176 | find: '/proc/12/task/46/fdinfo': Permission denied
+2025-11-04 14:08:26.179 | find: '/proc/12/task/47/fdinfo': Permission denied
+2025-11-04 14:08:26.181 | find: '/proc/12/task/48/fdinfo': Permission denied
+2025-11-04 14:08:26.184 | find: '/proc/12/task/50/fdinfo': Permission denied
+2025-11-04 14:08:26.185 | find: '/proc/12/task/51/fdinfo': Permission denied
+2025-11-04 14:08:26.187 | find: '/proc/12/task/52/fdinfo': Permission denied
+2025-11-04 14:08:26.188 | find: '/proc/12/task/54/fdinfo': Permission denied
+2025-11-04 14:08:26.189 | find: '/proc/12/task/55/fdinfo': Permission denied
+2025-11-04 14:08:26.191 | find: '/proc/12/task/56/fdinfo': Permission denied
+2025-11-04 14:08:26.193 | find: '/proc/12/task/57/fdinfo': Permission denied
+2025-11-04 14:08:26.194 | find: '/proc/12/task/58/fdinfo': Permission denied
+2025-11-04 14:08:26.195 | find: '/proc/12/task/59/fdinfo': Permission denied
+2025-11-04 14:08:26.198 | find: '/proc/12/task/60/fdinfo': Permission denied
+2025-11-04 14:08:26.199 | find: '/proc/12/task/61/fdinfo': Permission denied
+2025-11-04 14:08:26.202 | find: '/proc/12/task/62/fdinfo': Permission denied
+2025-11-04 14:08:26.206 | find: '/proc/12/task/63/fdinfo': Permission denied
+2025-11-04 14:08:26.207 | find: '/proc/12/task/64/fdinfo': Permission denied
+2025-11-04 14:08:26.208 | find: '/proc/12/task/71/fdinfo': Permission denied
+2025-11-04 14:08:26.210 | find: '/proc/12/map_files': Permission denied
+2025-11-04 14:08:26.210 | find: '/proc/12/fdinfo': Permission denied
+2025-11-04 14:08:26.227 | find: '/proc/12/task/12/fdinfo': Permission denied
+2025-11-04 14:08:26.228 | find: '/proc/12/task/14/fdinfo': Permission denied
+2025-11-04 14:08:26.230 | find: '/proc/12/task/15/fdinfo': Permission denied
+2025-11-04 14:08:26.231 | find: '/proc/12/task/16/fdinfo': Permission denied
+2025-11-04 14:08:26.233 | find: '/proc/12/task/17/fdinfo': Permission denied
+2025-11-04 14:08:26.236 | find: '/proc/12/task/18/fdinfo': Permission denied
+2025-11-04 14:08:26.241 | find: '/proc/12/task/19/fdinfo': Permission denied
+2025-11-04 14:08:26.242 | find: '/proc/12/task/20/fdinfo': Permission denied
+2025-11-04 14:08:26.244 | find: '/proc/12/task/21/fdinfo': Permission denied
+2025-11-04 14:08:26.245 | find: '/proc/12/task/22/fdinfo': Permission denied
+2025-11-04 14:08:26.246 | find: '/proc/12/task/23/fdinfo': Permission denied
+2025-11-04 14:08:26.247 | find: '/proc/12/task/24/fdinfo': Permission denied
+2025-11-04 14:08:26.249 | find: '/proc/12/task/25/fdinfo': Permission denied
+2025-11-04 14:08:26.251 | find: '/proc/12/task/26/fdinfo': Permission denied
+2025-11-04 14:08:26.257 | find: '/proc/12/task/27/fdinfo': Permission denied
+2025-11-04 14:08:26.259 | find: '/proc/12/task/28/fdinfo': Permission denied
+2025-11-04 14:08:26.260 | find: '/proc/12/task/29/fdinfo': Permission denied
+2025-11-04 14:08:26.262 | find: '/proc/12/task/30/fdinfo': Permission denied
+2025-11-04 14:08:26.263 | find: '/proc/12/task/31/fdinfo': Permission denied
+2025-11-04 14:08:26.265 | find: '/proc/12/task/32/fdinfo': Permission denied
+2025-11-04 14:08:26.266 | find: '/proc/12/task/33/fdinfo': Permission denied
+2025-11-04 14:08:26.268 | find: '/proc/12/task/34/fdinfo': Permission denied
+2025-11-04 14:08:26.269 | find: '/proc/12/task/35/fdinfo': Permission denied
+2025-11-04 14:08:26.273 | find: '/proc/12/task/36/fdinfo': Permission denied
+2025-11-04 14:08:26.276 | find: '/proc/12/task/37/fdinfo': Permission denied
+2025-11-04 14:08:26.278 | find: '/proc/12/task/38/fdinfo': Permission denied
+2025-11-04 14:08:26.280 | find: '/proc/12/task/39/fdinfo': Permission denied
+2025-11-04 14:08:26.282 | find: '/proc/12/task/40/fdinfo': Permission denied
+2025-11-04 14:08:26.283 | find: '/proc/12/task/41/fdinfo': Permission denied
+2025-11-04 14:08:26.284 | find: '/proc/12/task/42/fdinfo': Permission denied
+2025-11-04 14:08:26.286 | find: '/proc/12/task/43/fdinfo': Permission denied
+2025-11-04 14:08:26.287 | find: '/proc/12/task/44/fdinfo': Permission denied
+2025-11-04 14:08:26.288 | find: '/proc/12/task/45/fdinfo': Permission denied
+2025-11-04 14:08:26.290 | find: '/proc/12/task/46/fdinfo': Permission denied
+2025-11-04 14:08:26.291 | find: '/proc/12/task/47/fdinfo': Permission denied
+2025-11-04 14:08:26.293 | find: '/proc/12/task/48/fdinfo': Permission denied
+2025-11-04 14:08:26.295 | find: '/proc/12/task/50/fdinfo': Permission denied
+2025-11-04 14:08:26.297 | find: '/proc/12/task/51/fdinfo': Permission denied
+2025-11-04 14:08:26.299 | find: '/proc/12/task/52/fdinfo': Permission denied
+2025-11-04 14:08:26.302 | find: '/proc/12/task/54/fdinfo': Permission denied
+2025-11-04 14:08:26.303 | find: '/proc/12/task/55/fdinfo': Permission denied
+2025-11-04 14:08:26.304 | find: '/proc/12/task/56/fdinfo': Permission denied
+2025-11-04 14:08:26.306 | find: '/proc/12/task/57/fdinfo': Permission denied
+2025-11-04 14:08:26.307 | find: '/proc/12/task/58/fdinfo': Permission denied
+2025-11-04 14:08:26.309 | find: '/proc/12/task/59/fdinfo': Permission denied
+2025-11-04 14:08:26.310 | find: '/proc/12/task/60/fdinfo': Permission denied
+2025-11-04 14:08:26.311 | find: '/proc/12/task/61/fdinfo': Permission denied
+2025-11-04 14:08:26.313 | find: '/proc/12/task/62/fdinfo': Permission denied
+2025-11-04 14:08:26.315 | find: '/proc/12/task/63/fdinfo': Permission denied
+2025-11-04 14:08:26.316 | find: '/proc/12/task/64/fdinfo': Permission denied
+2025-11-04 14:08:26.317 | find: '/proc/12/task/71/fdinfo': Permission denied
+2025-11-04 14:08:26.319 | find: '/proc/12/map_files': Permission denied
+2025-11-04 14:08:26.319 | find: '/proc/12/fdinfo': Permission denied
+2025-11-04 14:08:26.335 | find: '/proc/12/task/12/fdinfo': Permission denied
+2025-11-04 14:08:26.336 | find: '/proc/12/task/14/fdinfo': Permission denied
+2025-11-04 14:08:26.338 | find: '/proc/12/task/15/fdinfo': Permission denied
+2025-11-04 14:08:26.341 | find: '/proc/12/task/16/fdinfo': Permission denied
+2025-11-04 14:08:26.343 | find: '/proc/12/task/17/fdinfo': Permission denied
+2025-11-04 14:08:26.346 | find: '/proc/12/task/18/fdinfo': Permission denied
+2025-11-04 14:08:26.348 | find: '/proc/12/task/19/fdinfo': Permission denied
+2025-11-04 14:08:26.350 | find: '/proc/12/task/20/fdinfo': Permission denied
+2025-11-04 14:08:26.351 | find: '/proc/12/task/21/fdinfo': Permission denied
+2025-11-04 14:08:26.352 | find: '/proc/12/task/22/fdinfo': Permission denied
+2025-11-04 14:08:26.353 | find: '/proc/12/task/23/fdinfo': Permission denied
+2025-11-04 14:08:26.355 | find: '/proc/12/task/24/fdinfo': Permission denied
+2025-11-04 14:08:26.356 | find: '/proc/12/task/25/fdinfo': Permission denied
+2025-11-04 14:08:26.357 | find: '/proc/12/task/26/fdinfo': Permission denied
+2025-11-04 14:08:26.358 | find: '/proc/12/task/27/fdinfo': Permission denied
+2025-11-04 14:08:26.360 | find: '/proc/12/task/28/fdinfo': Permission denied
+2025-11-04 14:08:26.361 | find: '/proc/12/task/29/fdinfo': Permission denied
+2025-11-04 14:08:26.363 | find: '/proc/12/task/30/fdinfo': Permission denied
+2025-11-04 14:08:26.365 | find: '/proc/12/task/31/fdinfo': Permission denied
+2025-11-04 14:08:26.366 | find: '/proc/12/task/32/fdinfo': Permission denied
+2025-11-04 14:08:26.367 | find: '/proc/12/task/33/fdinfo': Permission denied
+2025-11-04 14:08:26.368 | find: '/proc/12/task/34/fdinfo': Permission denied
+2025-11-04 14:08:26.370 | find: '/proc/12/task/35/fdinfo': Permission denied
+2025-11-04 14:08:26.371 | find: '/proc/12/task/36/fdinfo': Permission denied
+2025-11-04 14:08:26.373 | find: '/proc/12/task/37/fdinfo': Permission denied
+2025-11-04 14:08:26.374 | find: '/proc/12/task/38/fdinfo': Permission denied
+2025-11-04 14:08:26.375 | find: '/proc/12/task/39/fdinfo': Permission denied
+2025-11-04 14:08:26.377 | find: '/proc/12/task/40/fdinfo': Permission denied
+2025-11-04 14:08:26.379 | find: '/proc/12/task/41/fdinfo': Permission denied
+2025-11-04 14:08:26.381 | find: '/proc/12/task/42/fdinfo': Permission denied
+2025-11-04 14:08:26.382 | find: '/proc/12/task/43/fdinfo': Permission denied
+2025-11-04 14:08:26.384 | find: '/proc/12/task/44/fdinfo': Permission denied
+2025-11-04 14:08:26.385 | find: '/proc/12/task/45/fdinfo': Permission denied
+2025-11-04 14:08:26.387 | find: '/proc/12/task/46/fdinfo': Permission denied
+2025-11-04 14:08:26.389 | find: '/proc/12/task/47/fdinfo': Permission denied
+2025-11-04 14:08:26.391 | find: '/proc/12/task/48/fdinfo': Permission denied
+2025-11-04 14:08:26.392 | find: '/proc/12/task/50/fdinfo': Permission denied
+2025-11-04 14:08:26.393 | find: '/proc/12/task/51/fdinfo': Permission denied
+2025-11-04 14:08:26.395 | find: '/proc/12/task/52/fdinfo': Permission denied
+2025-11-04 14:08:26.396 | find: '/proc/12/task/54/fdinfo': Permission denied
+2025-11-04 14:08:26.397 | find: '/proc/12/task/55/fdinfo': Permission denied
+2025-11-04 14:08:26.399 | find: '/proc/12/task/56/fdinfo': Permission denied
+2025-11-04 14:08:26.401 | find: '/proc/12/task/57/fdinfo': Permission denied
+2025-11-04 14:08:26.402 | find: '/proc/12/task/58/fdinfo': Permission denied
+2025-11-04 14:08:26.404 | find: '/proc/12/task/59/fdinfo': Permission denied
+2025-11-04 14:08:26.407 | find: '/proc/12/task/60/fdinfo': Permission denied
+2025-11-04 14:08:26.409 | find: '/proc/12/task/61/fdinfo': Permission denied
+2025-11-04 14:08:26.410 | find: '/proc/12/task/62/fdinfo': Permission denied
+2025-11-04 14:08:26.411 | find: '/proc/12/task/63/fdinfo': Permission denied
+2025-11-04 14:08:26.412 | find: '/proc/12/task/64/fdinfo': Permission denied
+2025-11-04 14:08:26.414 | find: '/proc/12/task/71/fdinfo': Permission denied
+2025-11-04 14:08:26.415 | find: '/proc/12/map_files': Permission denied
+2025-11-04 14:08:26.415 | find: '/proc/12/fdinfo': Permission denied
+2025-11-04 14:08:26.572 | /opt/mssql/bin/crash-support-functions.sh: line 551: /var/opt/mssql/log/core.sqlservr.12.temp/log/dmesg.tail.txt: No space left on device
+2025-11-04 14:08:26.574 | dmesg: write error
+2025-11-04 14:08:26.581 | timeout: failed to run command 'journalctl': No such file or directory
+2025-11-04 14:08:26.590 | /opt/mssql/bin/crash-support-functions.sh: line 552: /var/opt/mssql/log/core.sqlservr.12.temp/log/journalctl.tail.txt: No space left on device
+2025-11-04 14:08:26.598 | /opt/mssql/bin/crash-support-functions.sh: line 553: /var/opt/mssql/log/core.sqlservr.12.temp/log/journalctl.sql.txt: No space left on device
+2025-11-04 14:08:26.603 | Tue Nov  4 07:08:26 UTC 2025 Capturing program information
+2025-11-04 14:08:27.346 | /opt/mssql/bin/crash-support-functions.sh: line 385: echo: write error: Input/output error
+2025-11-04 14:08:27.999 | /bin/cp: cannot create regular file '/var/opt/mssql/log/core.sqlservr.12.temp/crash.json': No space left on device
+2025-11-04 14:08:28.145 | /bin/cp: cannot create regular file '/var/opt/mssql/log/core.sqlservr.12.temp/crash.txt': No space left on device
+2025-11-04 14:08:28.155 | /opt/mssql/bin/crash-support-functions.sh: line 92: echo: write error: Input/output error
+2025-11-04 14:08:28.164 | /opt/mssql/bin/crash-support-functions.sh: line 127: echo: write error: Input/output error
+2025-11-04 14:08:28.174 | /opt/mssql/bin/crash-support-functions.sh: line 128: echo: write error: Input/output error
+2025-11-04 14:08:28.179 | Tue Nov  4 07:08:28 UTC 2025 Attempting to capture a dump with paldumper for pid 12
+2025-11-04 14:08:28.242 | /opt/mssql/bin/crash-support-functions.sh: line 251: /var/opt/mssql/log/core.sqlservr.12.temp/log/paldumper-debug.log: No space left on device
+2025-11-04 14:08:28.258 | WARNING: Capture attempt failure detected
+2025-11-04 14:08:28.258 | Attempting to capture a filtered dump with paldumper for pid 12
+2025-11-04 14:08:28.267 | /opt/mssql/bin/crash-support-functions.sh: line 261: /var/opt/mssql/log/core.sqlservr.12.temp/log/paldumper-debug.log: No space left on device
+2025-11-04 14:08:28.268 | WARNING: Attempt to capture dump failed.  Reference /var/opt/mssql/log/core.sqlservr.12.temp/log/paldumper-debug.log for details
+2025-11-04 14:08:28.284 | Tue Nov  4 07:08:28 UTC 2025 Attempting to capture a dump with gdb
+2025-11-04 14:08:28.293 | /opt/mssql/bin/crash-support-functions.sh: line 187: /var/opt/mssql/log/core.sqlservr.12.temp/gdbcommands: No space left on device
+2025-11-04 14:08:28.298 | /opt/mssql/bin/crash-support-functions.sh: line 214: /var/opt/mssql/log/core.sqlservr.12.temp/gdbcommands: No space left on device
+2025-11-04 14:08:28.306 | /opt/mssql/bin/crash-support-functions.sh: line 217: /var/opt/mssql/log/core.sqlservr.12.temp/gdbcommands: No space left on device
+2025-11-04 14:08:29.512 | Tue Nov  4 07:08:29 UTC 2025 Captured a dump with gdb
+2025-11-04 14:08:29.524 | Tue Nov  4 07:08:29 UTC 2025 Capturing program binaries
+2025-11-04 14:08:29.543 | /bin/cp: error writing '/var/opt/mssql/log/core.sqlservr.12.temp/bin/sqlservr': Input/output error
+2025-11-04 14:08:29.558 | /bin/cat: /var/opt/mssql/log/core.sqlservr.12.temp/log/paldumper-debug.log: No such file or directory
+2025-11-04 14:08:30.068 | chmod: changing permissions of '/var/opt/mssql/log': Operation not permitted
+2025-11-04 14:08:30.075 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d': Operation not permitted
+2025-11-04 14:08:30.083 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/bin': Operation not permitted
+2025-11-04 14:08:30.091 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/bin/sqlservr': Operation not permitted
+2025-11-04 14:08:30.096 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/crash.txt': Operation not permitted
+2025-11-04 14:08:30.100 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/etc': Operation not permitted
+2025-11-04 14:08:30.109 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/etc/crash_id.txt': Operation not permitted
+2025-11-04 14:08:30.114 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/etc/instance_id.txt': Operation not permitted
+2025-11-04 14:08:30.120 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/etc/version.txt': Operation not permitted
+2025-11-04 14:08:30.126 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/lib': Operation not permitted
+2025-11-04 14:08:30.135 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/lib/usr': Operation not permitted
+2025-11-04 14:08:30.144 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/lib/usr/lib': Operation not permitted
+2025-11-04 14:08:30.153 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/lib/usr/lib/x86_64-linux-gnu': Operation not permitted
+2025-11-04 14:08:30.163 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/lib/usr/lib/x86_64-linux-gnu/libthread_db.so.1': Operation not permitted
+2025-11-04 14:08:30.172 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/log': Operation not permitted
+2025-11-04 14:08:30.179 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/log/dmesg.tail.txt': Operation not permitted
+2025-11-04 14:08:30.183 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/log/filelist.txt': Operation not permitted
+2025-11-04 14:08:30.188 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/log/info.log': Operation not permitted
+2025-11-04 14:08:30.193 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/log/thread_information.log': Operation not permitted
+2025-11-04 14:08:30.200 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.json': Operation not permitted
+2025-11-04 14:08:30.206 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.txt': Operation not permitted
+2025-11-04 14:08:30.224 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_2_2025_10_0_50.12.log': Operation not permitted
+2025-11-04 14:08:30.338 | Tue Nov  4 07:08:30 UTC 2025 Not compressing the dump files, moving instead to: /var/opt/mssql/log/core.sqlservr.11_04_2025_07_08_23.12.d
+2025-11-04 14:29:35.452 | SQL Server 2022 will run as non-root by default.
+2025-11-04 14:29:35.457 | This container is running as user mssql.
+2025-11-04 14:29:35.457 | To learn more visit https://go.microsoft.com/fwlink/?linkid=2099216.
+2025-11-04 14:31:04.808 | ** ERROR: [AppLoader] Failed to load LSA: 0xc0070102
+2025-11-04 14:31:04.850 | AppLoader: Exiting with status=0xc0070102
+2025-11-04 14:31:04.850 | This program has encountered a fatal error and cannot continue running at Tue Nov  4 07:31:04 2025
+2025-11-04 14:31:04.850 | The following diagnostic information is available:
+2025-11-04 14:31:04.850 | 
+2025-11-04 14:31:04.850 |          Reason: 0x00000006
+2025-11-04 14:31:04.850 |         Message: Termination of \SystemRoot\system32\AppLoader.exe was due to fatal error 0xC0000001
+2025-11-04 14:31:04.850 |         Address: 0x3fff8d26a868
+2025-11-04 14:31:04.850 |     Stack Trace:
+2025-11-04 14:31:04.850 |                  file://package6/windows/system32/sqlpal.dll+0x0000000000209C12
+2025-11-04 14:31:04.850 |                  file://package6/windows/system32/sqlpal.dll+0x0000000000208156
+2025-11-04 14:31:04.850 |                  file://package6/windows/system32/sqlpal.dll+0x000000000026A9D0
+2025-11-04 14:31:04.850 |                  file://package6/windows/system32/sqlpal.dll+0x000000000026A868
+2025-11-04 14:31:04.850 |                  file://package6/windows/system32/sqlpal.dll+0x0000000000269296
+2025-11-04 14:31:04.850 |                  file://package6/windows/system32/sqlpal.dll+0x0000000000201F6E
+2025-11-04 14:31:04.850 |                  file://package6/windows/system32/sqlpal.dll+0x00000000003A02FB
+2025-11-04 14:31:04.850 |                  file:///windows/system32/ntdll.dll+0x00000000000F64AF
+2025-11-04 14:31:04.851 |                  file:///windows/system32/AppLoader.exe+0x0000000000002ED7
+2025-11-04 14:31:04.851 |                  file:///windows/system32/AppLoader.exe+0x000000000000301D
+2025-11-04 14:31:04.851 |                  file:///windows/system32/AppLoader.exe+0x000000000000303D
+2025-11-04 14:31:04.851 |                  file:///windows/system32/AppLoader.exe+0x000000000000A378
+2025-11-04 14:31:04.851 |                  file:///Windows/SYSTEM32/KERNEL32.DLL+0x0000000000017AF4
+2025-11-04 14:31:04.851 |                  file:///windows/system32/ntdll.dll+0x00000000000244A1
+2025-11-04 14:31:04.851 |         Process: 12 - sqlservr
+2025-11-04 14:31:04.851 |          Thread: 62 (application thread 0xc4)
+2025-11-04 14:31:04.851 |     Instance Id: 58eac966-2d7f-4a82-abaf-2b5a4a367acb
+2025-11-04 14:31:04.851 |        Crash Id: 6e109f84-adfd-40ff-8623-c655f66a125d
+2025-11-04 14:31:04.851 |     Build stamp: d7bafc6b0e42778633d72e5ac92bd37cabb7a668e87cd9af1a1e19fd0c89f66d
+2025-11-04 14:31:04.851 |    Distribution: Ubuntu 22.04.5 LTS
+2025-11-04 14:31:04.851 |      Processors: 8
+2025-11-04 14:31:04.851 |    Total Memory: 3775684608 bytes
+2025-11-04 14:31:04.851 |       Timestamp: Tue Nov  4 07:31:04 2025
+2025-11-04 14:31:04.851 | Capturing a dump of 12
+2025-11-04 14:31:26.549 | Successfully captured dump: /var/opt/mssql/log/core.sqlservr.11_4_2025_7_31_4.12
+2025-11-04 14:31:26.560 | Executing: /opt/mssql/bin/handle-crash.sh with parameters
+2025-11-04 14:31:26.564 |      handle-crash.sh
+2025-11-04 14:31:26.564 |      /opt/mssql/bin/sqlservr
+2025-11-04 14:31:26.564 |      12
+2025-11-04 14:31:26.564 |      /opt/mssql/bin
+2025-11-04 14:31:26.564 |      /var/opt/mssql/log/
+2025-11-04 14:31:26.564 |      
+2025-11-04 14:31:26.564 |      58eac966-2d7f-4a82-abaf-2b5a4a367acb
+2025-11-04 14:31:26.564 |      6e109f84-adfd-40ff-8623-c655f66a125d
+2025-11-04 14:31:26.564 |      
+2025-11-04 14:31:26.564 |      /var/opt/mssql/log/core.sqlservr.11_4_2025_7_31_4.12
+2025-11-04 14:31:26.710 | 
+2025-11-04 14:31:27.026 | Ubuntu 22.04.5 LTS
+2025-11-04 14:31:27.061 | Capturing core dump and information to /var/opt/mssql/log...
+2025-11-04 14:31:27.360 | /bin/cat: /proc/12/maps: Permission denied
+2025-11-04 14:31:28.306 | cat: /proc/12/environ: Permission denied
+2025-11-04 14:31:28.394 | find: '/proc/12/task/12/fdinfo': Permission denied
+2025-11-04 14:31:28.401 | find: '/proc/12/task/14/fdinfo': Permission denied
+2025-11-04 14:31:28.404 | find: '/proc/12/task/15/fdinfo': Permission denied
+2025-11-04 14:31:28.409 | find: '/proc/12/task/16/fdinfo': Permission denied
+2025-11-04 14:31:28.414 | find: '/proc/12/task/17/fdinfo': Permission denied
+2025-11-04 14:31:28.416 | find: '/proc/12/task/18/fdinfo': Permission denied
+2025-11-04 14:31:28.419 | find: '/proc/12/task/19/fdinfo': Permission denied
+2025-11-04 14:31:28.422 | find: '/proc/12/task/20/fdinfo': Permission denied
+2025-11-04 14:31:28.427 | find: '/proc/12/task/21/fdinfo': Permission denied
+2025-11-04 14:31:28.430 | find: '/proc/12/task/22/fdinfo': Permission denied
+2025-11-04 14:31:28.432 | find: '/proc/12/task/23/fdinfo': Permission denied
+2025-11-04 14:31:28.435 | find: '/proc/12/task/24/fdinfo': Permission denied
+2025-11-04 14:31:28.438 | find: '/proc/12/task/25/fdinfo': Permission denied
+2025-11-04 14:31:28.440 | find: '/proc/12/task/26/fdinfo': Permission denied
+2025-11-04 14:31:28.444 | find: '/proc/12/task/27/fdinfo': Permission denied
+2025-11-04 14:31:28.447 | find: '/proc/12/task/28/fdinfo': Permission denied
+2025-11-04 14:31:28.451 | find: '/proc/12/task/29/fdinfo': Permission denied
+2025-11-04 14:31:28.455 | find: '/proc/12/task/30/fdinfo': Permission denied
+2025-11-04 14:31:28.457 | find: '/proc/12/task/31/fdinfo': Permission denied
+2025-11-04 14:31:28.459 | find: '/proc/12/task/32/fdinfo': Permission denied
+2025-11-04 14:31:28.461 | find: '/proc/12/task/33/fdinfo': Permission denied
+2025-11-04 14:31:28.464 | find: '/proc/12/task/34/fdinfo': Permission denied
+2025-11-04 14:31:28.466 | find: '/proc/12/task/35/fdinfo': Permission denied
+2025-11-04 14:31:28.469 | find: '/proc/12/task/36/fdinfo': Permission denied
+2025-11-04 14:31:28.471 | find: '/proc/12/task/37/fdinfo': Permission denied
+2025-11-04 14:31:28.474 | find: '/proc/12/task/38/fdinfo': Permission denied
+2025-11-04 14:31:28.477 | find: '/proc/12/task/39/fdinfo': Permission denied
+2025-11-04 14:31:28.479 | find: '/proc/12/task/40/fdinfo': Permission denied
+2025-11-04 14:31:28.481 | find: '/proc/12/task/41/fdinfo': Permission denied
+2025-11-04 14:31:28.483 | find: '/proc/12/task/42/fdinfo': Permission denied
+2025-11-04 14:31:28.487 | find: '/proc/12/task/43/fdinfo': Permission denied
+2025-11-04 14:31:28.490 | find: '/proc/12/task/44/fdinfo': Permission denied
+2025-11-04 14:31:28.493 | find: '/proc/12/task/45/fdinfo': Permission denied
+2025-11-04 14:31:28.495 | find: '/proc/12/task/46/fdinfo': Permission denied
+2025-11-04 14:31:28.497 | find: '/proc/12/task/47/fdinfo': Permission denied
+2025-11-04 14:31:28.500 | find: '/proc/12/task/48/fdinfo': Permission denied
+2025-11-04 14:31:28.502 | find: '/proc/12/task/49/fdinfo': Permission denied
+2025-11-04 14:31:28.504 | find: '/proc/12/task/50/fdinfo': Permission denied
+2025-11-04 14:31:28.506 | find: '/proc/12/task/51/fdinfo': Permission denied
+2025-11-04 14:31:28.508 | find: '/proc/12/task/52/fdinfo': Permission denied
+2025-11-04 14:31:28.510 | find: '/proc/12/task/54/fdinfo': Permission denied
+2025-11-04 14:31:28.512 | find: '/proc/12/task/55/fdinfo': Permission denied
+2025-11-04 14:31:28.516 | find: '/proc/12/task/56/fdinfo': Permission denied
+2025-11-04 14:31:28.518 | find: '/proc/12/task/57/fdinfo': Permission denied
+2025-11-04 14:31:28.520 | find: '/proc/12/task/58/fdinfo': Permission denied
+2025-11-04 14:31:28.524 | find: '/proc/12/task/59/fdinfo': Permission denied
+2025-11-04 14:31:28.526 | find: '/proc/12/task/60/fdinfo': Permission denied
+2025-11-04 14:31:28.527 | find: '/proc/12/task/61/fdinfo': Permission denied
+2025-11-04 14:31:28.528 | find: '/proc/12/task/62/fdinfo': Permission denied
+2025-11-04 14:31:28.531 | find: '/proc/12/task/63/fdinfo': Permission denied
+2025-11-04 14:31:28.533 | find: '/proc/12/task/65/fdinfo': Permission denied
+2025-11-04 14:31:28.535 | find: '/proc/12/task/66/fdinfo': Permission denied
+2025-11-04 14:31:28.539 | find: '/proc/12/task/67/fdinfo': Permission denied
+2025-11-04 14:31:28.541 | find: '/proc/12/task/68/fdinfo': Permission denied
+2025-11-04 14:31:28.546 | find: '/proc/12/task/69/fdinfo': Permission denied
+2025-11-04 14:31:28.548 | find: '/proc/12/task/70/fdinfo': Permission denied
+2025-11-04 14:31:28.553 | find: '/proc/12/task/71/fdinfo': Permission denied
+2025-11-04 14:31:28.556 | find: '/proc/12/task/72/fdinfo': Permission denied
+2025-11-04 14:31:28.560 | find: '/proc/12/map_files': Permission denied
+2025-11-04 14:31:28.560 | find: '/proc/12/fdinfo': Permission denied
+2025-11-04 14:31:28.583 | find: '/proc/12/task/12/fdinfo': Permission denied
+2025-11-04 14:31:28.584 | find: '/proc/12/task/14/fdinfo': Permission denied
+2025-11-04 14:31:28.586 | find: '/proc/12/task/15/fdinfo': Permission denied
+2025-11-04 14:31:28.590 | find: '/proc/12/task/16/fdinfo': Permission denied
+2025-11-04 14:31:28.591 | find: '/proc/12/task/17/fdinfo': Permission denied
+2025-11-04 14:31:28.593 | find: '/proc/12/task/18/fdinfo': Permission denied
+2025-11-04 14:31:28.594 | find: '/proc/12/task/19/fdinfo': Permission denied
+2025-11-04 14:31:28.597 | find: '/proc/12/task/20/fdinfo': Permission denied
+2025-11-04 14:31:28.598 | find: '/proc/12/task/21/fdinfo': Permission denied
+2025-11-04 14:31:28.599 | find: '/proc/12/task/22/fdinfo': Permission denied
+2025-11-04 14:31:28.601 | find: '/proc/12/task/23/fdinfo': Permission denied
+2025-11-04 14:31:28.602 | find: '/proc/12/task/24/fdinfo': Permission denied
+2025-11-04 14:31:28.603 | find: '/proc/12/task/25/fdinfo': Permission denied
+2025-11-04 14:31:28.605 | find: '/proc/12/task/26/fdinfo': Permission denied
+2025-11-04 14:31:28.606 | find: '/proc/12/task/27/fdinfo': Permission denied
+2025-11-04 14:31:28.608 | find: '/proc/12/task/28/fdinfo': Permission denied
+2025-11-04 14:31:28.608 | find: '/proc/12/task/29/fdinfo': Permission denied
+2025-11-04 14:31:28.610 | find: '/proc/12/task/30/fdinfo': Permission denied
+2025-11-04 14:31:28.611 | find: '/proc/12/task/31/fdinfo': Permission denied
+2025-11-04 14:31:28.612 | find: '/proc/12/task/32/fdinfo': Permission denied
+2025-11-04 14:31:28.613 | find: '/proc/12/task/33/fdinfo': Permission denied
+2025-11-04 14:31:28.614 | find: '/proc/12/task/34/fdinfo': Permission denied
+2025-11-04 14:31:28.615 | find: '/proc/12/task/35/fdinfo': Permission denied
+2025-11-04 14:31:28.617 | find: '/proc/12/task/36/fdinfo': Permission denied
+2025-11-04 14:31:28.618 | find: '/proc/12/task/37/fdinfo': Permission denied
+2025-11-04 14:31:28.619 | find: '/proc/12/task/38/fdinfo': Permission denied
+2025-11-04 14:31:28.620 | find: '/proc/12/task/39/fdinfo': Permission denied
+2025-11-04 14:31:28.621 | find: '/proc/12/task/40/fdinfo': Permission denied
+2025-11-04 14:31:28.622 | find: '/proc/12/task/41/fdinfo': Permission denied
+2025-11-04 14:31:28.623 | find: '/proc/12/task/42/fdinfo': Permission denied
+2025-11-04 14:31:28.624 | find: '/proc/12/task/43/fdinfo': Permission denied
+2025-11-04 14:31:28.626 | find: '/proc/12/task/44/fdinfo': Permission denied
+2025-11-04 14:31:28.627 | find: '/proc/12/task/45/fdinfo': Permission denied
+2025-11-04 14:31:28.628 | find: '/proc/12/task/46/fdinfo': Permission denied
+2025-11-04 14:31:28.630 | find: '/proc/12/task/47/fdinfo': Permission denied
+2025-11-04 14:31:28.631 | find: '/proc/12/task/48/fdinfo': Permission denied
+2025-11-04 14:31:28.632 | find: '/proc/12/task/49/fdinfo': Permission denied
+2025-11-04 14:31:28.633 | find: '/proc/12/task/50/fdinfo': Permission denied
+2025-11-04 14:31:28.634 | find: '/proc/12/task/51/fdinfo': Permission denied
+2025-11-04 14:31:28.635 | find: '/proc/12/task/52/fdinfo': Permission denied
+2025-11-04 14:31:28.636 | find: '/proc/12/task/54/fdinfo': Permission denied
+2025-11-04 14:31:28.638 | find: '/proc/12/task/55/fdinfo': Permission denied
+2025-11-04 14:31:28.639 | find: '/proc/12/task/56/fdinfo': Permission denied
+2025-11-04 14:31:28.640 | find: '/proc/12/task/57/fdinfo': Permission denied
+2025-11-04 14:31:28.641 | find: '/proc/12/task/58/fdinfo': Permission denied
+2025-11-04 14:31:28.642 | find: '/proc/12/task/59/fdinfo': Permission denied
+2025-11-04 14:31:28.643 | find: '/proc/12/task/60/fdinfo': Permission denied
+2025-11-04 14:31:28.645 | find: '/proc/12/task/61/fdinfo': Permission denied
+2025-11-04 14:31:28.646 | find: '/proc/12/task/62/fdinfo': Permission denied
+2025-11-04 14:31:28.647 | find: '/proc/12/task/63/fdinfo': Permission denied
+2025-11-04 14:31:28.649 | find: '/proc/12/task/65/fdinfo': Permission denied
+2025-11-04 14:31:28.650 | find: '/proc/12/task/66/fdinfo': Permission denied
+2025-11-04 14:31:28.651 | find: '/proc/12/task/67/fdinfo': Permission denied
+2025-11-04 14:31:28.651 | find: '/proc/12/task/68/fdinfo': Permission denied
+2025-11-04 14:31:28.653 | find: '/proc/12/task/69/fdinfo': Permission denied
+2025-11-04 14:31:28.654 | find: '/proc/12/task/70/fdinfo': Permission denied
+2025-11-04 14:31:28.655 | find: '/proc/12/task/71/fdinfo': Permission denied
+2025-11-04 14:31:28.657 | find: '/proc/12/task/72/fdinfo': Permission denied
+2025-11-04 14:31:28.658 | find: '/proc/12/map_files': Permission denied
+2025-11-04 14:31:28.658 | find: '/proc/12/fdinfo': Permission denied
+2025-11-04 14:31:28.677 | find: '/proc/12/task/12/fdinfo': Permission denied
+2025-11-04 14:31:28.678 | find: '/proc/12/task/14/fdinfo': Permission denied
+2025-11-04 14:31:28.681 | find: '/proc/12/task/15/fdinfo': Permission denied
+2025-11-04 14:31:28.681 | find: '/proc/12/task/16/fdinfo': Permission denied
+2025-11-04 14:31:28.685 | find: '/proc/12/task/17/fdinfo': Permission denied
+2025-11-04 14:31:28.689 | find: '/proc/12/task/18/fdinfo': Permission denied
+2025-11-04 14:31:28.690 | find: '/proc/12/task/19/fdinfo': Permission denied
+2025-11-04 14:31:28.692 | find: '/proc/12/task/20/fdinfo': Permission denied
+2025-11-04 14:31:28.693 | find: '/proc/12/task/21/fdinfo': Permission denied
+2025-11-04 14:31:28.694 | find: '/proc/12/task/22/fdinfo': Permission denied
+2025-11-04 14:31:28.695 | find: '/proc/12/task/23/fdinfo': Permission denied
+2025-11-04 14:31:28.697 | find: '/proc/12/task/24/fdinfo': Permission denied
+2025-11-04 14:31:28.698 | find: '/proc/12/task/25/fdinfo': Permission denied
+2025-11-04 14:31:28.700 | find: '/proc/12/task/26/fdinfo': Permission denied
+2025-11-04 14:31:28.702 | find: '/proc/12/task/27/fdinfo': Permission denied
+2025-11-04 14:31:28.710 | find: '/proc/12/task/28/fdinfo': Permission denied
+2025-11-04 14:31:28.711 | find: '/proc/12/task/29/fdinfo': Permission denied
+2025-11-04 14:31:28.713 | find: '/proc/12/task/30/fdinfo': Permission denied
+2025-11-04 14:31:28.714 | find: '/proc/12/task/31/fdinfo': Permission denied
+2025-11-04 14:31:28.716 | find: '/proc/12/task/32/fdinfo': Permission denied
+2025-11-04 14:31:28.718 | find: '/proc/12/task/33/fdinfo': Permission denied
+2025-11-04 14:31:28.720 | find: '/proc/12/task/34/fdinfo': Permission denied
+2025-11-04 14:31:28.722 | find: '/proc/12/task/35/fdinfo': Permission denied
+2025-11-04 14:31:28.729 | find: '/proc/12/task/36/fdinfo': Permission denied
+2025-11-04 14:31:28.731 | find: '/proc/12/task/37/fdinfo': Permission denied
+2025-11-04 14:31:28.732 | find: '/proc/12/task/38/fdinfo': Permission denied
+2025-11-04 14:31:28.733 | find: '/proc/12/task/39/fdinfo': Permission denied
+2025-11-04 14:31:28.734 | find: '/proc/12/task/40/fdinfo': Permission denied
+2025-11-04 14:31:28.735 | find: '/proc/12/task/41/fdinfo': Permission denied
+2025-11-04 14:31:28.737 | find: '/proc/12/task/42/fdinfo': Permission denied
+2025-11-04 14:31:28.738 | find: '/proc/12/task/43/fdinfo': Permission denied
+2025-11-04 14:31:28.742 | find: '/proc/12/task/44/fdinfo': Permission denied
+2025-11-04 14:31:28.749 | find: '/proc/12/task/45/fdinfo': Permission denied
+2025-11-04 14:31:28.749 | find: '/proc/12/task/46/fdinfo': Permission denied
+2025-11-04 14:31:28.749 | find: '/proc/12/task/47/fdinfo': Permission denied
+2025-11-04 14:31:28.751 | find: '/proc/12/task/48/fdinfo': Permission denied
+2025-11-04 14:31:28.751 | find: '/proc/12/task/49/fdinfo': Permission denied
+2025-11-04 14:31:28.753 | find: '/proc/12/task/50/fdinfo': Permission denied
+2025-11-04 14:31:28.754 | find: '/proc/12/task/51/fdinfo': Permission denied
+2025-11-04 14:31:28.756 | find: '/proc/12/task/52/fdinfo': Permission denied
+2025-11-04 14:31:28.758 | find: '/proc/12/task/54/fdinfo': Permission denied
+2025-11-04 14:31:28.760 | find: '/proc/12/task/55/fdinfo': Permission denied
+2025-11-04 14:31:28.762 | find: '/proc/12/task/56/fdinfo': Permission denied
+2025-11-04 14:31:28.766 | find: '/proc/12/task/57/fdinfo': Permission denied
+2025-11-04 14:31:28.767 | find: '/proc/12/task/58/fdinfo': Permission denied
+2025-11-04 14:31:28.768 | find: '/proc/12/task/59/fdinfo': Permission denied
+2025-11-04 14:31:28.775 | find: '/proc/12/task/60/fdinfo': Permission denied
+2025-11-04 14:31:28.775 | find: '/proc/12/task/61/fdinfo': Permission denied
+2025-11-04 14:31:28.775 | find: '/proc/12/task/62/fdinfo': Permission denied
+2025-11-04 14:31:28.775 | find: '/proc/12/task/63/fdinfo': Permission denied
+2025-11-04 14:31:28.775 | find: '/proc/12/task/65/fdinfo': Permission denied
+2025-11-04 14:31:28.777 | find: '/proc/12/task/66/fdinfo': Permission denied
+2025-11-04 14:31:28.777 | find: '/proc/12/task/67/fdinfo': Permission denied
+2025-11-04 14:31:28.779 | find: '/proc/12/task/68/fdinfo': Permission denied
+2025-11-04 14:31:28.780 | find: '/proc/12/task/69/fdinfo': Permission denied
+2025-11-04 14:31:28.782 | find: '/proc/12/task/70/fdinfo': Permission denied
+2025-11-04 14:31:28.785 | find: '/proc/12/task/71/fdinfo': Permission denied
+2025-11-04 14:31:28.788 | find: '/proc/12/task/72/fdinfo': Permission denied
+2025-11-04 14:31:28.789 | find: '/proc/12/map_files': Permission denied
+2025-11-04 14:31:28.790 | find: '/proc/12/fdinfo': Permission denied
+2025-11-04 14:31:28.826 | find: '/proc/12/task/12/fdinfo': Permission denied
+2025-11-04 14:31:28.828 | find: '/proc/12/task/14/fdinfo': Permission denied
+2025-11-04 14:31:28.829 | find: '/proc/12/task/15/fdinfo': Permission denied
+2025-11-04 14:31:28.833 | find: '/proc/12/task/16/fdinfo': Permission denied
+2025-11-04 14:31:28.834 | find: '/proc/12/task/17/fdinfo': Permission denied
+2025-11-04 14:31:28.835 | find: '/proc/12/task/18/fdinfo': Permission denied
+2025-11-04 14:31:28.839 | find: '/proc/12/task/19/fdinfo': Permission denied
+2025-11-04 14:31:28.846 | find: '/proc/12/task/20/fdinfo': Permission denied
+2025-11-04 14:31:28.848 | find: '/proc/12/task/21/fdinfo': Permission denied
+2025-11-04 14:31:28.849 | find: '/proc/12/task/22/fdinfo': Permission denied
+2025-11-04 14:31:28.852 | find: '/proc/12/task/23/fdinfo': Permission denied
+2025-11-04 14:31:28.854 | find: '/proc/12/task/24/fdinfo': Permission denied
+2025-11-04 14:31:28.855 | find: '/proc/12/task/25/fdinfo': Permission denied
+2025-11-04 14:31:28.861 | find: '/proc/12/task/26/fdinfo': Permission denied
+2025-11-04 14:31:28.865 | find: '/proc/12/task/27/fdinfo': Permission denied
+2025-11-04 14:31:28.866 | find: '/proc/12/task/28/fdinfo': Permission denied
+2025-11-04 14:31:28.874 | find: '/proc/12/task/29/fdinfo': Permission denied
+2025-11-04 14:31:28.874 | find: '/proc/12/task/30/fdinfo': Permission denied
+2025-11-04 14:31:28.874 | find: '/proc/12/task/31/fdinfo': Permission denied
+2025-11-04 14:31:28.874 | find: '/proc/12/task/32/fdinfo': Permission denied
+2025-11-04 14:31:28.874 | find: '/proc/12/task/33/fdinfo': Permission denied
+2025-11-04 14:31:28.874 | find: '/proc/12/task/34/fdinfo': Permission denied
+2025-11-04 14:31:28.877 | find: '/proc/12/task/35/fdinfo': Permission denied
+2025-11-04 14:31:28.878 | find: '/proc/12/task/36/fdinfo': Permission denied
+2025-11-04 14:31:28.881 | find: '/proc/12/task/37/fdinfo': Permission denied
+2025-11-04 14:31:28.883 | find: '/proc/12/task/38/fdinfo': Permission denied
+2025-11-04 14:31:28.885 | find: '/proc/12/task/39/fdinfo': Permission denied
+2025-11-04 14:31:28.886 | find: '/proc/12/task/40/fdinfo': Permission denied
+2025-11-04 14:31:28.887 | find: '/proc/12/task/41/fdinfo': Permission denied
+2025-11-04 14:31:28.889 | find: '/proc/12/task/42/fdinfo': Permission denied
+2025-11-04 14:31:28.890 | find: '/proc/12/task/43/fdinfo': Permission denied
+2025-11-04 14:31:28.893 | find: '/proc/12/task/44/fdinfo': Permission denied
+2025-11-04 14:31:28.897 | find: '/proc/12/task/45/fdinfo': Permission denied
+2025-11-04 14:31:28.901 | find: '/proc/12/task/46/fdinfo': Permission denied
+2025-11-04 14:31:28.903 | find: '/proc/12/task/47/fdinfo': Permission denied
+2025-11-04 14:31:28.906 | find: '/proc/12/task/48/fdinfo': Permission denied
+2025-11-04 14:31:28.907 | find: '/proc/12/task/49/fdinfo': Permission denied
+2025-11-04 14:31:28.909 | find: '/proc/12/task/50/fdinfo': Permission denied
+2025-11-04 14:31:28.911 | find: '/proc/12/task/51/fdinfo': Permission denied
+2025-11-04 14:31:28.911 | find: '/proc/12/task/52/fdinfo': Permission denied
+2025-11-04 14:31:28.915 | find: '/proc/12/task/54/fdinfo': Permission denied
+2025-11-04 14:31:28.935 | find: '/proc/12/task/55/fdinfo': Permission denied
+2025-11-04 14:31:28.935 | find: '/proc/12/task/56/fdinfo': Permission denied
+2025-11-04 14:31:28.936 | find: '/proc/12/task/57/fdinfo': Permission denied
+2025-11-04 14:31:28.937 | find: '/proc/12/task/58/fdinfo': Permission denied
+2025-11-04 14:31:28.939 | find: '/proc/12/task/59/fdinfo': Permission denied
+2025-11-04 14:31:28.948 | find: '/proc/12/task/60/fdinfo': Permission denied
+2025-11-04 14:31:28.950 | find: '/proc/12/task/61/fdinfo': Permission denied
+2025-11-04 14:31:28.951 | find: '/proc/12/task/62/fdinfo': Permission denied
+2025-11-04 14:31:28.953 | find: '/proc/12/task/63/fdinfo': Permission denied
+2025-11-04 14:31:28.954 | find: '/proc/12/task/65/fdinfo': Permission denied
+2025-11-04 14:31:28.956 | find: '/proc/12/task/66/fdinfo': Permission denied
+2025-11-04 14:31:28.957 | find: '/proc/12/task/67/fdinfo': Permission denied
+2025-11-04 14:31:28.958 | find: '/proc/12/task/68/fdinfo': Permission denied
+2025-11-04 14:31:28.959 | find: '/proc/12/task/69/fdinfo': Permission denied
+2025-11-04 14:31:28.961 | find: '/proc/12/task/70/fdinfo': Permission denied
+2025-11-04 14:31:28.963 | find: '/proc/12/task/71/fdinfo': Permission denied
+2025-11-04 14:31:28.964 | find: '/proc/12/task/72/fdinfo': Permission denied
+2025-11-04 14:31:28.966 | find: '/proc/12/map_files': Permission denied
+2025-11-04 14:31:28.966 | find: '/proc/12/fdinfo': Permission denied
+2025-11-04 14:31:30.033 | timeout: failed to run command 'journalctl': No such file or directory
+2025-11-04 14:31:30.054 | timeout: failed to run command 'journalctl': No such file or directory
+2025-11-04 14:31:30.065 | Tue Nov  4 07:31:30 UTC 2025 Capturing program information
+2025-11-04 14:31:30.760 | Dump already generated: /var/opt/mssql/log/core.sqlservr.11_4_2025_7_31_4.12, moving to /var/opt/mssql/log/core.sqlservr.12.temp/core.sqlservr.12.gdmp
+2025-11-04 14:31:30.778 | Moving logs to /var/opt/mssql/log/core.sqlservr.12.temp/log/paldumper-debug.log
+2025-11-04 14:31:30.800 | Tue Nov  4 07:31:30 UTC 2025 Capturing program binaries
+2025-11-04 14:31:34.370 | chmod: changing permissions of '/var/opt/mssql/log': Operation not permitted
+2025-11-04 14:31:34.375 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d': Operation not permitted
+2025-11-04 14:31:34.382 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/bin': Operation not permitted
+2025-11-04 14:31:34.390 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/bin/sqlservr': Operation not permitted
+2025-11-04 14:31:34.394 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/crash.txt': Operation not permitted
+2025-11-04 14:31:34.396 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/etc': Operation not permitted
+2025-11-04 14:31:34.403 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/etc/crash_id.txt': Operation not permitted
+2025-11-04 14:31:34.406 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/etc/instance_id.txt': Operation not permitted
+2025-11-04 14:31:34.408 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/etc/version.txt': Operation not permitted
+2025-11-04 14:31:34.412 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/lib': Operation not permitted
+2025-11-04 14:31:34.419 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/lib/usr': Operation not permitted
+2025-11-04 14:31:34.424 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/lib/usr/lib': Operation not permitted
+2025-11-04 14:31:34.429 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/lib/usr/lib/x86_64-linux-gnu': Operation not permitted
+2025-11-04 14:31:34.437 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/lib/usr/lib/x86_64-linux-gnu/libthread_db.so.1': Operation not permitted
+2025-11-04 14:31:34.442 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/log': Operation not permitted
+2025-11-04 14:31:34.450 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/log/dmesg.tail.txt': Operation not permitted
+2025-11-04 14:31:34.453 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/log/filelist.txt': Operation not permitted
+2025-11-04 14:31:34.457 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/log/info.log': Operation not permitted
+2025-11-04 14:31:34.462 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/log/thread_information.log': Operation not permitted
+2025-11-04 14:31:34.468 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.json': Operation not permitted
+2025-11-04 14:31:34.472 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.txt': Operation not permitted
+2025-11-04 14:31:34.615 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_2_2025_10_0_50.12.log': Operation not permitted
+2025-11-04 14:31:35.259 | Tue Nov  4 07:31:35 UTC 2025 Not compressing the dump files, moving instead to: /var/opt/mssql/log/core.sqlservr.11_04_2025_07_31_27.12.d
+2025-11-04 14:32:42.511 | SQL Server 2022 will run as non-root by default.
+2025-11-04 14:32:42.512 | This container is running as user mssql.
+2025-11-04 14:32:42.512 | To learn more visit https://go.microsoft.com/fwlink/?linkid=2099216.
+2025-11-04 14:34:09.656 | ** ERROR: [AppLoader] Failed to load LSA: 0xc0070102
+2025-11-04 14:34:09.656 | AppLoader: Exiting with status=0xc0070102
+2025-11-04 14:34:09.656 | This program has encountered a fatal error and cannot continue running at Tue Nov  4 07:34:09 2025
+2025-11-04 14:34:09.657 | The following diagnostic information is available:
+2025-11-04 14:34:09.657 | 
+2025-11-04 14:34:09.657 |          Reason: 0x00000006
+2025-11-04 14:34:09.657 |         Message: Termination of \SystemRoot\system32\AppLoader.exe was due to fatal error 0xC0000001
+2025-11-04 14:34:09.657 |         Address: 0x3fff9166a868
+2025-11-04 14:34:09.657 |     Stack Trace:
+2025-11-04 14:34:09.657 |                  file://package6/windows/system32/sqlpal.dll+0x0000000000209C12
+2025-11-04 14:34:09.657 |                  file://package6/windows/system32/sqlpal.dll+0x0000000000208156
+2025-11-04 14:34:09.657 |                  file://package6/windows/system32/sqlpal.dll+0x000000000026A9D0
+2025-11-04 14:34:09.657 |                  file://package6/windows/system32/sqlpal.dll+0x000000000026A868
+2025-11-04 14:34:09.657 |                  file://package6/windows/system32/sqlpal.dll+0x0000000000269296
+2025-11-04 14:34:09.657 |                  file://package6/windows/system32/sqlpal.dll+0x0000000000201F6E
+2025-11-04 14:34:09.657 |                  file://package6/windows/system32/sqlpal.dll+0x00000000003A02FB
+2025-11-04 14:34:09.657 |                  file:///windows/system32/ntdll.dll+0x00000000000F64AF
+2025-11-04 14:34:09.657 |                  file:///windows/system32/AppLoader.exe+0x0000000000002ED7
+2025-11-04 14:34:09.658 |                  file:///windows/system32/AppLoader.exe+0x000000000000301D
+2025-11-04 14:34:09.658 |                  file:///windows/system32/AppLoader.exe+0x000000000000303D
+2025-11-04 14:34:09.659 |                  file:///windows/system32/AppLoader.exe+0x000000000000A378
+2025-11-04 14:34:09.659 |                  file:///Windows/SYSTEM32/KERNEL32.DLL+0x0000000000017AF4
+2025-11-04 14:34:09.659 |                  file:///windows/system32/ntdll.dll+0x00000000000244A1
+2025-11-04 14:34:09.659 |         Process: 12 - sqlservr
+2025-11-04 14:34:09.659 |          Thread: 62 (application thread 0xc4)
+2025-11-04 14:34:09.659 |     Instance Id: 58eac966-2d7f-4a82-abaf-2b5a4a367acb
+2025-11-04 14:34:09.659 |        Crash Id: dfb1ebed-b2ea-4041-9d2b-0050cf31acaf
+2025-11-04 14:34:09.659 |     Build stamp: d7bafc6b0e42778633d72e5ac92bd37cabb7a668e87cd9af1a1e19fd0c89f66d
+2025-11-04 14:34:09.659 |    Distribution: Ubuntu 22.04.5 LTS
+2025-11-04 14:34:09.659 |      Processors: 8
+2025-11-04 14:34:09.659 |    Total Memory: 3775684608 bytes
+2025-11-04 14:34:09.659 |       Timestamp: Tue Nov  4 07:34:09 2025
+2025-11-04 14:34:09.700 | Capturing a dump of 12
+2025-11-04 14:34:31.795 | Successfully captured dump: /var/opt/mssql/log/core.sqlservr.11_4_2025_7_34_9.12
+2025-11-04 14:34:31.797 | Executing: /opt/mssql/bin/handle-crash.sh with parameters
+2025-11-04 14:34:31.797 |      handle-crash.sh
+2025-11-04 14:34:31.797 |      /opt/mssql/bin/sqlservr
+2025-11-04 14:34:31.797 |      12
+2025-11-04 14:34:31.797 |      /opt/mssql/bin
+2025-11-04 14:34:31.797 |      /var/opt/mssql/log/
+2025-11-04 14:34:31.797 |      
+2025-11-04 14:34:31.797 |      58eac966-2d7f-4a82-abaf-2b5a4a367acb
+2025-11-04 14:34:31.797 |      dfb1ebed-b2ea-4041-9d2b-0050cf31acaf
+2025-11-04 14:34:31.797 |      
+2025-11-04 14:34:31.797 |      /var/opt/mssql/log/core.sqlservr.11_4_2025_7_34_9.12
+2025-11-04 14:34:31.837 | 
+2025-11-04 14:34:32.245 | Ubuntu 22.04.5 LTS
+2025-11-04 14:34:32.277 | Capturing core dump and information to /var/opt/mssql/log...
+2025-11-04 14:34:32.588 | /bin/cat: /proc/12/maps: Permission denied
+2025-11-04 14:34:33.841 | cat: /proc/12/environ: Permission denied
+2025-11-04 14:34:33.958 | find: '/proc/12/task/12/fdinfo': Permission denied
+2025-11-04 14:34:33.968 | find: '/proc/12/task/14/fdinfo': Permission denied
+2025-11-04 14:34:33.973 | find: '/proc/12/task/15/fdinfo': Permission denied
+2025-11-04 14:34:33.980 | find: '/proc/12/task/16/fdinfo': Permission denied
+2025-11-04 14:34:33.985 | find: '/proc/12/task/17/fdinfo': Permission denied
+2025-11-04 14:34:33.994 | find: '/proc/12/task/18/fdinfo': Permission denied
+2025-11-04 14:34:34.001 | find: '/proc/12/task/19/fdinfo': Permission denied
+2025-11-04 14:34:34.081 | find: '/proc/12/task/20/fdinfo': Permission denied
+2025-11-04 14:34:34.105 | find: '/proc/12/task/21/fdinfo': Permission denied
+2025-11-04 14:34:34.116 | find: '/proc/12/task/22/fdinfo': Permission denied
+2025-11-04 14:34:34.122 | find: '/proc/12/task/23/fdinfo': Permission denied
+2025-11-04 14:34:34.128 | find: '/proc/12/task/24/fdinfo': Permission denied
+2025-11-04 14:34:34.134 | find: '/proc/12/task/25/fdinfo': Permission denied
+2025-11-04 14:34:34.138 | find: '/proc/12/task/26/fdinfo': Permission denied
+2025-11-04 14:34:34.144 | find: '/proc/12/task/27/fdinfo': Permission denied
+2025-11-04 14:34:34.148 | find: '/proc/12/task/28/fdinfo': Permission denied
+2025-11-04 14:34:34.152 | find: '/proc/12/task/29/fdinfo': Permission denied
+2025-11-04 14:34:34.160 | find: '/proc/12/task/30/fdinfo': Permission denied
+2025-11-04 14:34:34.165 | find: '/proc/12/task/31/fdinfo': Permission denied
+2025-11-04 14:34:34.170 | find: '/proc/12/task/32/fdinfo': Permission denied
+2025-11-04 14:34:34.174 | find: '/proc/12/task/33/fdinfo': Permission denied
+2025-11-04 14:34:34.180 | find: '/proc/12/task/34/fdinfo': Permission denied
+2025-11-04 14:34:34.185 | find: '/proc/12/task/35/fdinfo': Permission denied
+2025-11-04 14:34:34.191 | find: '/proc/12/task/36/fdinfo': Permission denied
+2025-11-04 14:34:34.195 | find: '/proc/12/task/37/fdinfo': Permission denied
+2025-11-04 14:34:34.200 | find: '/proc/12/task/38/fdinfo': Permission denied
+2025-11-04 14:34:34.210 | find: '/proc/12/task/39/fdinfo': Permission denied
+2025-11-04 14:34:34.213 | find: '/proc/12/task/40/fdinfo': Permission denied
+2025-11-04 14:34:34.218 | find: '/proc/12/task/41/fdinfo': Permission denied
+2025-11-04 14:34:34.223 | find: '/proc/12/task/42/fdinfo': Permission denied
+2025-11-04 14:34:34.227 | find: '/proc/12/task/43/fdinfo': Permission denied
+2025-11-04 14:34:34.229 | find: '/proc/12/task/44/fdinfo': Permission denied
+2025-11-04 14:34:34.234 | find: '/proc/12/task/45/fdinfo': Permission denied
+2025-11-04 14:34:34.240 | find: '/proc/12/task/46/fdinfo': Permission denied
+2025-11-04 14:34:34.243 | find: '/proc/12/task/47/fdinfo': Permission denied
+2025-11-04 14:34:34.247 | find: '/proc/12/task/48/fdinfo': Permission denied
+2025-11-04 14:34:34.252 | find: '/proc/12/task/49/fdinfo': Permission denied
+2025-11-04 14:34:34.259 | find: '/proc/12/task/50/fdinfo': Permission denied
+2025-11-04 14:34:34.262 | find: '/proc/12/task/51/fdinfo': Permission denied
+2025-11-04 14:34:34.268 | find: '/proc/12/task/52/fdinfo': Permission denied
+2025-11-04 14:34:34.273 | find: '/proc/12/task/54/fdinfo': Permission denied
+2025-11-04 14:34:34.283 | find: '/proc/12/task/55/fdinfo': Permission denied
+2025-11-04 14:34:34.286 | find: '/proc/12/task/56/fdinfo': Permission denied
+2025-11-04 14:34:34.289 | find: '/proc/12/task/57/fdinfo': Permission denied
+2025-11-04 14:34:34.292 | find: '/proc/12/task/58/fdinfo': Permission denied
+2025-11-04 14:34:34.295 | find: '/proc/12/task/59/fdinfo': Permission denied
+2025-11-04 14:34:34.298 | find: '/proc/12/task/60/fdinfo': Permission denied
+2025-11-04 14:34:34.302 | find: '/proc/12/task/61/fdinfo': Permission denied
+2025-11-04 14:34:34.310 | find: '/proc/12/task/62/fdinfo': Permission denied
+2025-11-04 14:34:34.313 | find: '/proc/12/task/63/fdinfo': Permission denied
+2025-11-04 14:34:34.316 | find: '/proc/12/task/65/fdinfo': Permission denied
+2025-11-04 14:34:34.321 | find: '/proc/12/task/66/fdinfo': Permission denied
+2025-11-04 14:34:34.331 | find: '/proc/12/task/67/fdinfo': Permission denied
+2025-11-04 14:34:34.335 | find: '/proc/12/task/68/fdinfo': Permission denied
+2025-11-04 14:34:34.337 | find: '/proc/12/task/69/fdinfo': Permission denied
+2025-11-04 14:34:34.340 | find: '/proc/12/task/70/fdinfo': Permission denied
+2025-11-04 14:34:34.344 | find: '/proc/12/task/71/fdinfo': Permission denied
+2025-11-04 14:34:34.348 | find: '/proc/12/task/72/fdinfo': Permission denied
+2025-11-04 14:34:34.350 | find: '/proc/12/map_files': Permission denied
+2025-11-04 14:34:34.350 | find: '/proc/12/fdinfo': Permission denied
+2025-11-04 14:34:34.367 | find: '/proc/12/task/12/fdinfo': Permission denied
+2025-11-04 14:34:34.368 | find: '/proc/12/task/14/fdinfo': Permission denied
+2025-11-04 14:34:34.370 | find: '/proc/12/task/15/fdinfo': Permission denied
+2025-11-04 14:34:34.375 | find: '/proc/12/task/16/fdinfo': Permission denied
+2025-11-04 14:34:34.376 | find: '/proc/12/task/17/fdinfo': Permission denied
+2025-11-04 14:34:34.379 | find: '/proc/12/task/18/fdinfo': Permission denied
+2025-11-04 14:34:34.380 | find: '/proc/12/task/19/fdinfo': Permission denied
+2025-11-04 14:34:34.381 | find: '/proc/12/task/20/fdinfo': Permission denied
+2025-11-04 14:34:34.383 | find: '/proc/12/task/21/fdinfo': Permission denied
+2025-11-04 14:34:34.384 | find: '/proc/12/task/22/fdinfo': Permission denied
+2025-11-04 14:34:34.386 | find: '/proc/12/task/23/fdinfo': Permission denied
+2025-11-04 14:34:34.388 | find: '/proc/12/task/24/fdinfo': Permission denied
+2025-11-04 14:34:34.391 | find: '/proc/12/task/25/fdinfo': Permission denied
+2025-11-04 14:34:34.393 | find: '/proc/12/task/26/fdinfo': Permission denied
+2025-11-04 14:34:34.395 | find: '/proc/12/task/27/fdinfo': Permission denied
+2025-11-04 14:34:34.397 | find: '/proc/12/task/28/fdinfo': Permission denied
+2025-11-04 14:34:34.399 | find: '/proc/12/task/29/fdinfo': Permission denied
+2025-11-04 14:34:34.400 | find: '/proc/12/task/30/fdinfo': Permission denied
+2025-11-04 14:34:34.401 | find: '/proc/12/task/31/fdinfo': Permission denied
+2025-11-04 14:34:34.404 | find: '/proc/12/task/32/fdinfo': Permission denied
+2025-11-04 14:34:34.407 | find: '/proc/12/task/33/fdinfo': Permission denied
+2025-11-04 14:34:34.409 | find: '/proc/12/task/34/fdinfo': Permission denied
+2025-11-04 14:34:34.412 | find: '/proc/12/task/35/fdinfo': Permission denied
+2025-11-04 14:34:34.414 | find: '/proc/12/task/36/fdinfo': Permission denied
+2025-11-04 14:34:34.416 | find: '/proc/12/task/37/fdinfo': Permission denied
+2025-11-04 14:34:34.418 | find: '/proc/12/task/38/fdinfo': Permission denied
+2025-11-04 14:34:34.419 | find: '/proc/12/task/39/fdinfo': Permission denied
+2025-11-04 14:34:34.421 | find: '/proc/12/task/40/fdinfo': Permission denied
+2025-11-04 14:34:34.423 | find: '/proc/12/task/41/fdinfo': Permission denied
+2025-11-04 14:34:34.426 | find: '/proc/12/task/42/fdinfo': Permission denied
+2025-11-04 14:34:34.428 | find: '/proc/12/task/43/fdinfo': Permission denied
+2025-11-04 14:34:34.430 | find: '/proc/12/task/44/fdinfo': Permission denied
+2025-11-04 14:34:34.433 | find: '/proc/12/task/45/fdinfo': Permission denied
+2025-11-04 14:34:34.435 | find: '/proc/12/task/46/fdinfo': Permission denied
+2025-11-04 14:34:34.437 | find: '/proc/12/task/47/fdinfo': Permission denied
+2025-11-04 14:34:34.440 | find: '/proc/12/task/48/fdinfo': Permission denied
+2025-11-04 14:34:34.441 | find: '/proc/12/task/49/fdinfo': Permission denied
+2025-11-04 14:34:34.443 | find: '/proc/12/task/50/fdinfo': Permission denied
+2025-11-04 14:34:34.444 | find: '/proc/12/task/51/fdinfo': Permission denied
+2025-11-04 14:34:34.448 | find: '/proc/12/task/52/fdinfo': Permission denied
+2025-11-04 14:34:34.450 | find: '/proc/12/task/54/fdinfo': Permission denied
+2025-11-04 14:34:34.453 | find: '/proc/12/task/55/fdinfo': Permission denied
+2025-11-04 14:34:34.455 | find: '/proc/12/task/56/fdinfo': Permission denied
+2025-11-04 14:34:34.457 | find: '/proc/12/task/57/fdinfo': Permission denied
+2025-11-04 14:34:34.459 | find: '/proc/12/task/58/fdinfo': Permission denied
+2025-11-04 14:34:34.461 | find: '/proc/12/task/59/fdinfo': Permission denied
+2025-11-04 14:34:34.464 | find: '/proc/12/task/60/fdinfo': Permission denied
+2025-11-04 14:34:34.466 | find: '/proc/12/task/61/fdinfo': Permission denied
+2025-11-04 14:34:34.469 | find: '/proc/12/task/62/fdinfo': Permission denied
+2025-11-04 14:34:34.471 | find: '/proc/12/task/63/fdinfo': Permission denied
+2025-11-04 14:34:34.473 | find: '/proc/12/task/65/fdinfo': Permission denied
+2025-11-04 14:34:34.475 | find: '/proc/12/task/66/fdinfo': Permission denied
+2025-11-04 14:34:34.476 | find: '/proc/12/task/67/fdinfo': Permission denied
+2025-11-04 14:34:34.478 | find: '/proc/12/task/68/fdinfo': Permission denied
+2025-11-04 14:34:34.482 | find: '/proc/12/task/69/fdinfo': Permission denied
+2025-11-04 14:34:34.483 | find: '/proc/12/task/70/fdinfo': Permission denied
+2025-11-04 14:34:34.486 | find: '/proc/12/task/71/fdinfo': Permission denied
+2025-11-04 14:34:34.488 | find: '/proc/12/task/72/fdinfo': Permission denied
+2025-11-04 14:34:34.489 | find: '/proc/12/map_files': Permission denied
+2025-11-04 14:34:34.489 | find: '/proc/12/fdinfo': Permission denied
+2025-11-04 14:34:34.506 | find: '/proc/12/task/12/fdinfo': Permission denied
+2025-11-04 14:34:34.507 | find: '/proc/12/task/14/fdinfo': Permission denied
+2025-11-04 14:34:34.510 | find: '/proc/12/task/15/fdinfo': Permission denied
+2025-11-04 14:34:34.511 | find: '/proc/12/task/16/fdinfo': Permission denied
+2025-11-04 14:34:34.515 | find: '/proc/12/task/17/fdinfo': Permission denied
+2025-11-04 14:34:34.516 | find: '/proc/12/task/18/fdinfo': Permission denied
+2025-11-04 14:34:34.517 | find: '/proc/12/task/19/fdinfo': Permission denied
+2025-11-04 14:34:34.519 | find: '/proc/12/task/20/fdinfo': Permission denied
+2025-11-04 14:34:34.520 | find: '/proc/12/task/21/fdinfo': Permission denied
+2025-11-04 14:34:34.522 | find: '/proc/12/task/22/fdinfo': Permission denied
+2025-11-04 14:34:34.524 | find: '/proc/12/task/23/fdinfo': Permission denied
+2025-11-04 14:34:34.525 | find: '/proc/12/task/24/fdinfo': Permission denied
+2025-11-04 14:34:34.527 | find: '/proc/12/task/25/fdinfo': Permission denied
+2025-11-04 14:34:34.528 | find: '/proc/12/task/26/fdinfo': Permission denied
+2025-11-04 14:34:34.530 | find: '/proc/12/task/27/fdinfo': Permission denied
+2025-11-04 14:34:34.531 | find: '/proc/12/task/28/fdinfo': Permission denied
+2025-11-04 14:34:34.533 | find: '/proc/12/task/29/fdinfo': Permission denied
+2025-11-04 14:34:34.534 | find: '/proc/12/task/30/fdinfo': Permission denied
+2025-11-04 14:34:34.536 | find: '/proc/12/task/31/fdinfo': Permission denied
+2025-11-04 14:34:34.539 | find: '/proc/12/task/32/fdinfo': Permission denied
+2025-11-04 14:34:34.540 | find: '/proc/12/task/33/fdinfo': Permission denied
+2025-11-04 14:34:34.541 | find: '/proc/12/task/34/fdinfo': Permission denied
+2025-11-04 14:34:34.542 | find: '/proc/12/task/35/fdinfo': Permission denied
+2025-11-04 14:34:34.543 | find: '/proc/12/task/36/fdinfo': Permission denied
+2025-11-04 14:34:34.546 | find: '/proc/12/task/37/fdinfo': Permission denied
+2025-11-04 14:34:34.549 | find: '/proc/12/task/38/fdinfo': Permission denied
+2025-11-04 14:34:34.550 | find: '/proc/12/task/39/fdinfo': Permission denied
+2025-11-04 14:34:34.551 | find: '/proc/12/task/40/fdinfo': Permission denied
+2025-11-04 14:34:34.552 | find: '/proc/12/task/41/fdinfo': Permission denied
+2025-11-04 14:34:34.553 | find: '/proc/12/task/42/fdinfo': Permission denied
+2025-11-04 14:34:34.556 | find: '/proc/12/task/43/fdinfo': Permission denied
+2025-11-04 14:34:34.557 | find: '/proc/12/task/44/fdinfo': Permission denied
+2025-11-04 14:34:34.559 | find: '/proc/12/task/45/fdinfo': Permission denied
+2025-11-04 14:34:34.560 | find: '/proc/12/task/46/fdinfo': Permission denied
+2025-11-04 14:34:34.562 | find: '/proc/12/task/47/fdinfo': Permission denied
+2025-11-04 14:34:34.563 | find: '/proc/12/task/48/fdinfo': Permission denied
+2025-11-04 14:34:34.566 | find: '/proc/12/task/49/fdinfo': Permission denied
+2025-11-04 14:34:34.567 | find: '/proc/12/task/50/fdinfo': Permission denied
+2025-11-04 14:34:34.568 | find: '/proc/12/task/51/fdinfo': Permission denied
+2025-11-04 14:34:34.572 | find: '/proc/12/task/52/fdinfo': Permission denied
+2025-11-04 14:34:34.572 | find: '/proc/12/task/54/fdinfo': Permission denied
+2025-11-04 14:34:34.572 | find: '/proc/12/task/55/fdinfo': Permission denied
+2025-11-04 14:34:34.573 | find: '/proc/12/task/56/fdinfo': Permission denied
+2025-11-04 14:34:34.573 | find: '/proc/12/task/57/fdinfo': Permission denied
+2025-11-04 14:34:34.578 | find: '/proc/12/task/58/fdinfo': Permission denied
+2025-11-04 14:34:34.582 | find: '/proc/12/task/59/fdinfo': Permission denied
+2025-11-04 14:34:34.584 | find: '/proc/12/task/60/fdinfo': Permission denied
+2025-11-04 14:34:34.585 | find: '/proc/12/task/61/fdinfo': Permission denied
+2025-11-04 14:34:34.586 | find: '/proc/12/task/62/fdinfo': Permission denied
+2025-11-04 14:34:34.587 | find: '/proc/12/task/63/fdinfo': Permission denied
+2025-11-04 14:34:34.589 | find: '/proc/12/task/65/fdinfo': Permission denied
+2025-11-04 14:34:34.593 | find: '/proc/12/task/66/fdinfo': Permission denied
+2025-11-04 14:34:34.597 | find: '/proc/12/task/67/fdinfo': Permission denied
+2025-11-04 14:34:34.598 | find: '/proc/12/task/68/fdinfo': Permission denied
+2025-11-04 14:34:34.600 | find: '/proc/12/task/69/fdinfo': Permission denied
+2025-11-04 14:34:34.601 | find: '/proc/12/task/70/fdinfo': Permission denied
+2025-11-04 14:34:34.603 | find: '/proc/12/task/71/fdinfo': Permission denied
+2025-11-04 14:34:34.605 | find: '/proc/12/task/72/fdinfo': Permission denied
+2025-11-04 14:34:34.606 | find: '/proc/12/map_files': Permission denied
+2025-11-04 14:34:34.606 | find: '/proc/12/fdinfo': Permission denied
+2025-11-04 14:34:34.618 | find: '/proc/12/task/12/fdinfo': Permission denied
+2025-11-04 14:34:34.621 | find: '/proc/12/task/14/fdinfo': Permission denied
+2025-11-04 14:34:34.623 | find: '/proc/12/task/15/fdinfo': Permission denied
+2025-11-04 14:34:34.624 | find: '/proc/12/task/16/fdinfo': Permission denied
+2025-11-04 14:34:34.625 | find: '/proc/12/task/17/fdinfo': Permission denied
+2025-11-04 14:34:34.629 | find: '/proc/12/task/18/fdinfo': Permission denied
+2025-11-04 14:34:34.631 | find: '/proc/12/task/19/fdinfo': Permission denied
+2025-11-04 14:34:34.633 | find: '/proc/12/task/20/fdinfo': Permission denied
+2025-11-04 14:34:34.635 | find: '/proc/12/task/21/fdinfo': Permission denied
+2025-11-04 14:34:34.637 | find: '/proc/12/task/22/fdinfo': Permission denied
+2025-11-04 14:34:34.640 | find: '/proc/12/task/23/fdinfo': Permission denied
+2025-11-04 14:34:34.642 | find: '/proc/12/task/24/fdinfo': Permission denied
+2025-11-04 14:34:34.644 | find: '/proc/12/task/25/fdinfo': Permission denied
+2025-11-04 14:34:34.647 | find: '/proc/12/task/26/fdinfo': Permission denied
+2025-11-04 14:34:34.648 | find: '/proc/12/task/27/fdinfo': Permission denied
+2025-11-04 14:34:34.649 | find: '/proc/12/task/28/fdinfo': Permission denied
+2025-11-04 14:34:34.651 | find: '/proc/12/task/29/fdinfo': Permission denied
+2025-11-04 14:34:34.652 | find: '/proc/12/task/30/fdinfo': Permission denied
+2025-11-04 14:34:34.654 | find: '/proc/12/task/31/fdinfo': Permission denied
+2025-11-04 14:34:34.657 | find: '/proc/12/task/32/fdinfo': Permission denied
+2025-11-04 14:34:34.658 | find: '/proc/12/task/33/fdinfo': Permission denied
+2025-11-04 14:34:34.660 | find: '/proc/12/task/34/fdinfo': Permission denied
+2025-11-04 14:34:34.663 | find: '/proc/12/task/35/fdinfo': Permission denied
+2025-11-04 14:34:34.665 | find: '/proc/12/task/36/fdinfo': Permission denied
+2025-11-04 14:34:34.666 | find: '/proc/12/task/37/fdinfo': Permission denied
+2025-11-04 14:34:34.667 | find: '/proc/12/task/38/fdinfo': Permission denied
+2025-11-04 14:34:34.668 | find: '/proc/12/task/39/fdinfo': Permission denied
+2025-11-04 14:34:34.671 | find: '/proc/12/task/40/fdinfo': Permission denied
+2025-11-04 14:34:34.673 | find: '/proc/12/task/41/fdinfo': Permission denied
+2025-11-04 14:34:34.674 | find: '/proc/12/task/42/fdinfo': Permission denied
+2025-11-04 14:34:34.676 | find: '/proc/12/task/43/fdinfo': Permission denied
+2025-11-04 14:34:34.684 | find: '/proc/12/task/44/fdinfo': Permission denied
+2025-11-04 14:34:34.685 | find: '/proc/12/task/45/fdinfo': Permission denied
+2025-11-04 14:34:34.686 | find: '/proc/12/task/46/fdinfo': Permission denied
+2025-11-04 14:34:34.687 | find: '/proc/12/task/47/fdinfo': Permission denied
+2025-11-04 14:34:34.689 | find: '/proc/12/task/48/fdinfo': Permission denied
+2025-11-04 14:34:34.690 | find: '/proc/12/task/49/fdinfo': Permission denied
+2025-11-04 14:34:34.691 | find: '/proc/12/task/50/fdinfo': Permission denied
+2025-11-04 14:34:34.693 | find: '/proc/12/task/51/fdinfo': Permission denied
+2025-11-04 14:34:34.695 | find: '/proc/12/task/52/fdinfo': Permission denied
+2025-11-04 14:34:34.698 | find: '/proc/12/task/54/fdinfo': Permission denied
+2025-11-04 14:34:34.699 | find: '/proc/12/task/55/fdinfo': Permission denied
+2025-11-04 14:34:34.701 | find: '/proc/12/task/56/fdinfo': Permission denied
+2025-11-04 14:34:34.703 | find: '/proc/12/task/57/fdinfo': Permission denied
+2025-11-04 14:34:34.705 | find: '/proc/12/task/58/fdinfo': Permission denied
+2025-11-04 14:34:34.707 | find: '/proc/12/task/59/fdinfo': Permission denied
+2025-11-04 14:34:34.708 | find: '/proc/12/task/60/fdinfo': Permission denied
+2025-11-04 14:34:34.709 | find: '/proc/12/task/61/fdinfo': Permission denied
+2025-11-04 14:34:34.710 | find: '/proc/12/task/62/fdinfo': Permission denied
+2025-11-04 14:34:34.712 | find: '/proc/12/task/63/fdinfo': Permission denied
+2025-11-04 14:34:34.713 | find: '/proc/12/task/65/fdinfo': Permission denied
+2025-11-04 14:34:34.714 | find: '/proc/12/task/66/fdinfo': Permission denied
+2025-11-04 14:34:34.715 | find: '/proc/12/task/67/fdinfo': Permission denied
+2025-11-04 14:34:34.719 | find: '/proc/12/task/68/fdinfo': Permission denied
+2025-11-04 14:34:34.722 | find: '/proc/12/task/69/fdinfo': Permission denied
+2025-11-04 14:34:34.725 | find: '/proc/12/task/70/fdinfo': Permission denied
+2025-11-04 14:34:34.727 | find: '/proc/12/task/71/fdinfo': Permission denied
+2025-11-04 14:34:34.729 | find: '/proc/12/task/72/fdinfo': Permission denied
+2025-11-04 14:34:34.731 | find: '/proc/12/map_files': Permission denied
+2025-11-04 14:34:34.731 | find: '/proc/12/fdinfo': Permission denied
+2025-11-04 14:34:35.827 | timeout: failed to run command 'journalctl': No such file or directory
+2025-11-04 14:34:35.845 | timeout: failed to run command 'journalctl': No such file or directory
+2025-11-04 14:34:35.851 | Tue Nov  4 07:34:35 UTC 2025 Capturing program information
+2025-11-04 14:34:36.841 | Dump already generated: /var/opt/mssql/log/core.sqlservr.11_4_2025_7_34_9.12, moving to /var/opt/mssql/log/core.sqlservr.12.temp/core.sqlservr.12.gdmp
+2025-11-04 14:34:36.862 | Moving logs to /var/opt/mssql/log/core.sqlservr.12.temp/log/paldumper-debug.log
+2025-11-04 14:34:36.887 | Tue Nov  4 07:34:36 UTC 2025 Capturing program binaries
+2025-11-04 14:34:39.525 | chmod: changing permissions of '/var/opt/mssql/log': Operation not permitted
+2025-11-04 14:34:39.531 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d': Operation not permitted
+2025-11-04 14:34:39.540 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/bin': Operation not permitted
+2025-11-04 14:34:39.548 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/bin/sqlservr': Operation not permitted
+2025-11-04 14:34:39.556 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/crash.txt': Operation not permitted
+2025-11-04 14:34:39.559 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/etc': Operation not permitted
+2025-11-04 14:34:39.602 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/etc/crash_id.txt': Operation not permitted
+2025-11-04 14:34:39.611 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/etc/instance_id.txt': Operation not permitted
+2025-11-04 14:34:39.618 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/etc/version.txt': Operation not permitted
+2025-11-04 14:34:39.625 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/lib': Operation not permitted
+2025-11-04 14:34:39.636 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/lib/usr': Operation not permitted
+2025-11-04 14:34:39.644 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/lib/usr/lib': Operation not permitted
+2025-11-04 14:34:39.652 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/lib/usr/lib/x86_64-linux-gnu': Operation not permitted
+2025-11-04 14:34:39.663 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/lib/usr/lib/x86_64-linux-gnu/libthread_db.so.1': Operation not permitted
+2025-11-04 14:34:39.670 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/log': Operation not permitted
+2025-11-04 14:34:39.677 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/log/dmesg.tail.txt': Operation not permitted
+2025-11-04 14:34:39.681 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/log/filelist.txt': Operation not permitted
+2025-11-04 14:34:39.685 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/log/info.log': Operation not permitted
+2025-11-04 14:34:39.690 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/log/thread_information.log': Operation not permitted
+2025-11-04 14:34:39.697 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.json': Operation not permitted
+2025-11-04 14:34:39.702 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.txt': Operation not permitted
+2025-11-04 14:34:40.094 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_2_2025_10_0_50.12.log': Operation not permitted
+2025-11-04 14:34:40.496 | Tue Nov  4 07:34:40 UTC 2025 Not compressing the dump files, moving instead to: /var/opt/mssql/log/core.sqlservr.11_04_2025_07_34_32.12.d
+2025-11-04 14:41:47.654 | SQL Server 2022 will run as non-root by default.
+2025-11-04 14:41:47.657 | This container is running as user mssql.
+2025-11-04 14:41:47.657 | To learn more visit https://go.microsoft.com/fwlink/?linkid=2099216.
+2025-11-04 14:43:00.094 | ** ERROR: [AppLoader] Failed to load LSA: 0xc0070102
+2025-11-04 14:43:00.096 | AppLoader: Exiting with status=0xc0070102
+2025-11-04 14:43:00.098 | This program has encountered a fatal error and cannot continue running at Tue Nov  4 07:43:00 2025
+2025-11-04 14:43:00.098 | The following diagnostic information is available:
+2025-11-04 14:43:00.098 | 
+2025-11-04 14:43:00.098 |          Reason: 0x00000006
+2025-11-04 14:43:00.098 |         Message: Termination of \SystemRoot\system32\AppLoader.exe was due to fatal error 0xC0000001
+2025-11-04 14:43:00.098 |         Address: 0x3fffa426a868
+2025-11-04 14:43:00.098 |     Stack Trace:
+2025-11-04 14:43:00.098 |                  file://package6/windows/system32/sqlpal.dll+0x0000000000209C12
+2025-11-04 14:43:00.098 |                  file://package6/windows/system32/sqlpal.dll+0x0000000000208156
+2025-11-04 14:43:00.098 |                  file://package6/windows/system32/sqlpal.dll+0x000000000026A9D0
+2025-11-04 14:43:00.098 |                  file://package6/windows/system32/sqlpal.dll+0x000000000026A868
+2025-11-04 14:43:00.098 |                  file://package6/windows/system32/sqlpal.dll+0x0000000000269296
+2025-11-04 14:43:00.098 |                  file://package6/windows/system32/sqlpal.dll+0x0000000000201F6E
+2025-11-04 14:43:00.098 |                  file://package6/windows/system32/sqlpal.dll+0x00000000003A02FB
+2025-11-04 14:43:00.098 |                  file:///windows/system32/ntdll.dll+0x00000000000F64AF
+2025-11-04 14:43:00.098 |                  file:///windows/system32/AppLoader.exe+0x0000000000002ED7
+2025-11-04 14:43:00.098 |                  file:///windows/system32/AppLoader.exe+0x000000000000301D
+2025-11-04 14:43:00.098 |                  file:///windows/system32/AppLoader.exe+0x000000000000303D
+2025-11-04 14:43:00.100 |                  file:///windows/system32/AppLoader.exe+0x000000000000A378
+2025-11-04 14:43:00.100 |                  file:///Windows/SYSTEM32/KERNEL32.DLL+0x0000000000017AF4
+2025-11-04 14:43:00.100 |                  file:///windows/system32/ntdll.dll+0x00000000000244A1
+2025-11-04 14:43:00.100 |         Process: 12 - sqlservr
+2025-11-04 14:43:00.100 |          Thread: 62 (application thread 0xc4)
+2025-11-04 14:43:00.100 |     Instance Id: 58eac966-2d7f-4a82-abaf-2b5a4a367acb
+2025-11-04 14:43:00.100 |        Crash Id: c301e107-bdd8-4f57-9428-1049903cf7bb
+2025-11-04 14:43:00.100 |     Build stamp: d7bafc6b0e42778633d72e5ac92bd37cabb7a668e87cd9af1a1e19fd0c89f66d
+2025-11-04 14:43:00.100 |    Distribution: Ubuntu 22.04.5 LTS
+2025-11-04 14:43:00.100 |      Processors: 8
+2025-11-04 14:43:00.100 |    Total Memory: 3775684608 bytes
+2025-11-04 14:43:00.100 |       Timestamp: Tue Nov  4 07:43:00 2025
+2025-11-04 14:43:00.121 | Capturing a dump of 12
+2025-11-04 14:43:18.478 | Executing: /opt/mssql/bin/handle-crash.sh with parameters
+2025-11-04 14:43:18.478 |      handle-crash.sh
+2025-11-04 14:43:18.478 |      /opt/mssql/bin/sqlservr
+2025-11-04 14:43:18.478 |      12
+2025-11-04 14:43:18.478 |      /opt/mssql/bin
+2025-11-04 14:43:18.478 |      /var/opt/mssql/log/
+2025-11-04 14:43:18.478 |      
+2025-11-04 14:43:18.478 |      58eac966-2d7f-4a82-abaf-2b5a4a367acb
+2025-11-04 14:43:18.478 |      c301e107-bdd8-4f57-9428-1049903cf7bb
+2025-11-04 14:43:18.478 |      
+2025-11-04 14:43:18.478 |      /var/opt/mssql/log/core.sqlservr.11_4_2025_7_43_0.12
+2025-11-04 14:43:18.477 | Successfully captured dump: /var/opt/mssql/log/core.sqlservr.11_4_2025_7_43_0.12
+2025-11-04 14:43:18.500 | 
+2025-11-04 14:43:18.716 | Ubuntu 22.04.5 LTS
+2025-11-04 14:43:18.739 | Capturing core dump and information to /var/opt/mssql/log...
+2025-11-04 14:43:18.959 | /bin/cat: /proc/12/maps: Permission denied
+2025-11-04 14:43:19.777 | cat: /proc/12/environ: Permission denied
+2025-11-04 14:43:19.858 | find: '/proc/12/task/12/fdinfo': Permission denied
+2025-11-04 14:43:19.862 | find: '/proc/12/task/14/fdinfo': Permission denied
+2025-11-04 14:43:19.864 | find: '/proc/12/task/15/fdinfo': Permission denied
+2025-11-04 14:43:19.870 | find: '/proc/12/task/16/fdinfo': Permission denied
+2025-11-04 14:43:19.875 | find: '/proc/12/task/17/fdinfo': Permission denied
+2025-11-04 14:43:19.879 | find: '/proc/12/task/18/fdinfo': Permission denied
+2025-11-04 14:43:19.883 | find: '/proc/12/task/19/fdinfo': Permission denied
+2025-11-04 14:43:19.888 | find: '/proc/12/task/20/fdinfo': Permission denied
+2025-11-04 14:43:19.893 | find: '/proc/12/task/21/fdinfo': Permission denied
+2025-11-04 14:43:19.896 | find: '/proc/12/task/22/fdinfo': Permission denied
+2025-11-04 14:43:19.900 | find: '/proc/12/task/23/fdinfo': Permission denied
+2025-11-04 14:43:19.905 | find: '/proc/12/task/24/fdinfo': Permission denied
+2025-11-04 14:43:19.910 | find: '/proc/12/task/25/fdinfo': Permission denied
+2025-11-04 14:43:19.914 | find: '/proc/12/task/26/fdinfo': Permission denied
+2025-11-04 14:43:19.919 | find: '/proc/12/task/27/fdinfo': Permission denied
+2025-11-04 14:43:19.923 | find: '/proc/12/task/28/fdinfo': Permission denied
+2025-11-04 14:43:19.929 | find: '/proc/12/task/29/fdinfo': Permission denied
+2025-11-04 14:43:19.934 | find: '/proc/12/task/30/fdinfo': Permission denied
+2025-11-04 14:43:19.940 | find: '/proc/12/task/31/fdinfo': Permission denied
+2025-11-04 14:43:19.943 | find: '/proc/12/task/32/fdinfo': Permission denied
+2025-11-04 14:43:19.948 | find: '/proc/12/task/33/fdinfo': Permission denied
+2025-11-04 14:43:19.952 | find: '/proc/12/task/34/fdinfo': Permission denied
+2025-11-04 14:43:19.956 | find: '/proc/12/task/35/fdinfo': Permission denied
+2025-11-04 14:43:19.960 | find: '/proc/12/task/36/fdinfo': Permission denied
+2025-11-04 14:43:19.963 | find: '/proc/12/task/37/fdinfo': Permission denied
+2025-11-04 14:43:19.968 | find: '/proc/12/task/38/fdinfo': Permission denied
+2025-11-04 14:43:19.973 | find: '/proc/12/task/39/fdinfo': Permission denied
+2025-11-04 14:43:19.975 | find: '/proc/12/task/40/fdinfo': Permission denied
+2025-11-04 14:43:19.979 | find: '/proc/12/task/41/fdinfo': Permission denied
+2025-11-04 14:43:19.982 | find: '/proc/12/task/42/fdinfo': Permission denied
+2025-11-04 14:43:19.988 | find: '/proc/12/task/43/fdinfo': Permission denied
+2025-11-04 14:43:19.993 | find: '/proc/12/task/44/fdinfo': Permission denied
+2025-11-04 14:43:19.997 | find: '/proc/12/task/45/fdinfo': Permission denied
+2025-11-04 14:43:20.002 | find: '/proc/12/task/46/fdinfo': Permission denied
+2025-11-04 14:43:20.006 | find: '/proc/12/task/47/fdinfo': Permission denied
+2025-11-04 14:43:20.010 | find: '/proc/12/task/48/fdinfo': Permission denied
+2025-11-04 14:43:20.013 | find: '/proc/12/task/49/fdinfo': Permission denied
+2025-11-04 14:43:20.018 | find: '/proc/12/task/50/fdinfo': Permission denied
+2025-11-04 14:43:20.021 | find: '/proc/12/task/51/fdinfo': Permission denied
+2025-11-04 14:43:20.025 | find: '/proc/12/task/52/fdinfo': Permission denied
+2025-11-04 14:43:20.029 | find: '/proc/12/task/54/fdinfo': Permission denied
+2025-11-04 14:43:20.031 | find: '/proc/12/task/55/fdinfo': Permission denied
+2025-11-04 14:43:20.034 | find: '/proc/12/task/56/fdinfo': Permission denied
+2025-11-04 14:43:20.036 | find: '/proc/12/task/57/fdinfo': Permission denied
+2025-11-04 14:43:20.037 | find: '/proc/12/task/58/fdinfo': Permission denied
+2025-11-04 14:43:20.039 | find: '/proc/12/task/59/fdinfo': Permission denied
+2025-11-04 14:43:20.041 | find: '/proc/12/task/60/fdinfo': Permission denied
+2025-11-04 14:43:20.043 | find: '/proc/12/task/61/fdinfo': Permission denied
+2025-11-04 14:43:20.046 | find: '/proc/12/task/62/fdinfo': Permission denied
+2025-11-04 14:43:20.048 | find: '/proc/12/task/63/fdinfo': Permission denied
+2025-11-04 14:43:20.052 | find: '/proc/12/task/65/fdinfo': Permission denied
+2025-11-04 14:43:20.055 | find: '/proc/12/task/66/fdinfo': Permission denied
+2025-11-04 14:43:20.058 | find: '/proc/12/task/67/fdinfo': Permission denied
+2025-11-04 14:43:20.059 | find: '/proc/12/task/68/fdinfo': Permission denied
+2025-11-04 14:43:20.061 | find: '/proc/12/task/69/fdinfo': Permission denied
+2025-11-04 14:43:20.065 | find: '/proc/12/task/70/fdinfo': Permission denied
+2025-11-04 14:43:20.069 | find: '/proc/12/task/71/fdinfo': Permission denied
+2025-11-04 14:43:20.071 | find: '/proc/12/map_files': Permission denied
+2025-11-04 14:43:20.071 | find: '/proc/12/fdinfo': Permission denied
+2025-11-04 14:43:20.085 | find: '/proc/12/task/12/fdinfo': Permission denied
+2025-11-04 14:43:20.087 | find: '/proc/12/task/14/fdinfo': Permission denied
+2025-11-04 14:43:20.089 | find: '/proc/12/task/15/fdinfo': Permission denied
+2025-11-04 14:43:20.091 | find: '/proc/12/task/16/fdinfo': Permission denied
+2025-11-04 14:43:20.093 | find: '/proc/12/task/17/fdinfo': Permission denied
+2025-11-04 14:43:20.095 | find: '/proc/12/task/18/fdinfo': Permission denied
+2025-11-04 14:43:20.098 | find: '/proc/12/task/19/fdinfo': Permission denied
+2025-11-04 14:43:20.100 | find: '/proc/12/task/20/fdinfo': Permission denied
+2025-11-04 14:43:20.102 | find: '/proc/12/task/21/fdinfo': Permission denied
+2025-11-04 14:43:20.103 | find: '/proc/12/task/22/fdinfo': Permission denied
+2025-11-04 14:43:20.105 | find: '/proc/12/task/23/fdinfo': Permission denied
+2025-11-04 14:43:20.106 | find: '/proc/12/task/24/fdinfo': Permission denied
+2025-11-04 14:43:20.108 | find: '/proc/12/task/25/fdinfo': Permission denied
+2025-11-04 14:43:20.109 | find: '/proc/12/task/26/fdinfo': Permission denied
+2025-11-04 14:43:20.111 | find: '/proc/12/task/27/fdinfo': Permission denied
+2025-11-04 14:43:20.112 | find: '/proc/12/task/28/fdinfo': Permission denied
+2025-11-04 14:43:20.114 | find: '/proc/12/task/29/fdinfo': Permission denied
+2025-11-04 14:43:20.116 | find: '/proc/12/task/30/fdinfo': Permission denied
+2025-11-04 14:43:20.118 | find: '/proc/12/task/31/fdinfo': Permission denied
+2025-11-04 14:43:20.120 | find: '/proc/12/task/32/fdinfo': Permission denied
+2025-11-04 14:43:20.121 | find: '/proc/12/task/33/fdinfo': Permission denied
+2025-11-04 14:43:20.123 | find: '/proc/12/task/34/fdinfo': Permission denied
+2025-11-04 14:43:20.125 | find: '/proc/12/task/35/fdinfo': Permission denied
+2025-11-04 14:43:20.126 | find: '/proc/12/task/36/fdinfo': Permission denied
+2025-11-04 14:43:20.127 | find: '/proc/12/task/37/fdinfo': Permission denied
+2025-11-04 14:43:20.129 | find: '/proc/12/task/38/fdinfo': Permission denied
+2025-11-04 14:43:20.130 | find: '/proc/12/task/39/fdinfo': Permission denied
+2025-11-04 14:43:20.132 | find: '/proc/12/task/40/fdinfo': Permission denied
+2025-11-04 14:43:20.133 | find: '/proc/12/task/41/fdinfo': Permission denied
+2025-11-04 14:43:20.135 | find: '/proc/12/task/42/fdinfo': Permission denied
+2025-11-04 14:43:20.137 | find: '/proc/12/task/43/fdinfo': Permission denied
+2025-11-04 14:43:20.138 | find: '/proc/12/task/44/fdinfo': Permission denied
+2025-11-04 14:43:20.139 | find: '/proc/12/task/45/fdinfo': Permission denied
+2025-11-04 14:43:20.141 | find: '/proc/12/task/46/fdinfo': Permission denied
+2025-11-04 14:43:20.141 | find: '/proc/12/task/47/fdinfo': Permission denied
+2025-11-04 14:43:20.143 | find: '/proc/12/task/48/fdinfo': Permission denied
+2025-11-04 14:43:20.144 | find: '/proc/12/task/49/fdinfo': Permission denied
+2025-11-04 14:43:20.145 | find: '/proc/12/task/50/fdinfo': Permission denied
+2025-11-04 14:43:20.147 | find: '/proc/12/task/51/fdinfo': Permission denied
+2025-11-04 14:43:20.149 | find: '/proc/12/task/52/fdinfo': Permission denied
+2025-11-04 14:43:20.150 | find: '/proc/12/task/54/fdinfo': Permission denied
+2025-11-04 14:43:20.151 | find: '/proc/12/task/55/fdinfo': Permission denied
+2025-11-04 14:43:20.153 | find: '/proc/12/task/56/fdinfo': Permission denied
+2025-11-04 14:43:20.154 | find: '/proc/12/task/57/fdinfo': Permission denied
+2025-11-04 14:43:20.156 | find: '/proc/12/task/58/fdinfo': Permission denied
+2025-11-04 14:43:20.158 | find: '/proc/12/task/59/fdinfo': Permission denied
+2025-11-04 14:43:20.159 | find: '/proc/12/task/60/fdinfo': Permission denied
+2025-11-04 14:43:20.160 | find: '/proc/12/task/61/fdinfo': Permission denied
+2025-11-04 14:43:20.161 | find: '/proc/12/task/62/fdinfo': Permission denied
+2025-11-04 14:43:20.162 | find: '/proc/12/task/63/fdinfo': Permission denied
+2025-11-04 14:43:20.164 | find: '/proc/12/task/65/fdinfo': Permission denied
+2025-11-04 14:43:20.165 | find: '/proc/12/task/66/fdinfo': Permission denied
+2025-11-04 14:43:20.166 | find: '/proc/12/task/67/fdinfo': Permission denied
+2025-11-04 14:43:20.168 | find: '/proc/12/task/68/fdinfo': Permission denied
+2025-11-04 14:43:20.169 | find: '/proc/12/task/69/fdinfo': Permission denied
+2025-11-04 14:43:20.170 | find: '/proc/12/task/70/fdinfo': Permission denied
+2025-11-04 14:43:20.171 | find: '/proc/12/task/71/fdinfo': Permission denied
+2025-11-04 14:43:20.173 | find: '/proc/12/map_files': Permission denied
+2025-11-04 14:43:20.173 | find: '/proc/12/fdinfo': Permission denied
+2025-11-04 14:43:20.185 | find: '/proc/12/task/12/fdinfo': Permission denied
+2025-11-04 14:43:20.187 | find: '/proc/12/task/14/fdinfo': Permission denied
+2025-11-04 14:43:20.188 | find: '/proc/12/task/15/fdinfo': Permission denied
+2025-11-04 14:43:20.189 | find: '/proc/12/task/16/fdinfo': Permission denied
+2025-11-04 14:43:20.191 | find: '/proc/12/task/17/fdinfo': Permission denied
+2025-11-04 14:43:20.192 | find: '/proc/12/task/18/fdinfo': Permission denied
+2025-11-04 14:43:20.194 | find: '/proc/12/task/19/fdinfo': Permission denied
+2025-11-04 14:43:20.196 | find: '/proc/12/task/20/fdinfo': Permission denied
+2025-11-04 14:43:20.198 | find: '/proc/12/task/21/fdinfo': Permission denied
+2025-11-04 14:43:20.199 | find: '/proc/12/task/22/fdinfo': Permission denied
+2025-11-04 14:43:20.200 | find: '/proc/12/task/23/fdinfo': Permission denied
+2025-11-04 14:43:20.202 | find: '/proc/12/task/24/fdinfo': Permission denied
+2025-11-04 14:43:20.203 | find: '/proc/12/task/25/fdinfo': Permission denied
+2025-11-04 14:43:20.205 | find: '/proc/12/task/26/fdinfo': Permission denied
+2025-11-04 14:43:20.206 | find: '/proc/12/task/27/fdinfo': Permission denied
+2025-11-04 14:43:20.208 | find: '/proc/12/task/28/fdinfo': Permission denied
+2025-11-04 14:43:20.209 | find: '/proc/12/task/29/fdinfo': Permission denied
+2025-11-04 14:43:20.210 | find: '/proc/12/task/30/fdinfo': Permission denied
+2025-11-04 14:43:20.211 | find: '/proc/12/task/31/fdinfo': Permission denied
+2025-11-04 14:43:20.214 | find: '/proc/12/task/32/fdinfo': Permission denied
+2025-11-04 14:43:20.216 | find: '/proc/12/task/33/fdinfo': Permission denied
+2025-11-04 14:43:20.218 | find: '/proc/12/task/34/fdinfo': Permission denied
+2025-11-04 14:43:20.219 | find: '/proc/12/task/35/fdinfo': Permission denied
+2025-11-04 14:43:20.221 | find: '/proc/12/task/36/fdinfo': Permission denied
+2025-11-04 14:43:20.222 | find: '/proc/12/task/37/fdinfo': Permission denied
+2025-11-04 14:43:20.223 | find: '/proc/12/task/38/fdinfo': Permission denied
+2025-11-04 14:43:20.224 | find: '/proc/12/task/39/fdinfo': Permission denied
+2025-11-04 14:43:20.226 | find: '/proc/12/task/40/fdinfo': Permission denied
+2025-11-04 14:43:20.227 | find: '/proc/12/task/41/fdinfo': Permission denied
+2025-11-04 14:43:20.228 | find: '/proc/12/task/42/fdinfo': Permission denied
+2025-11-04 14:43:20.229 | find: '/proc/12/task/43/fdinfo': Permission denied
+2025-11-04 14:43:20.231 | find: '/proc/12/task/44/fdinfo': Permission denied
+2025-11-04 14:43:20.232 | find: '/proc/12/task/45/fdinfo': Permission denied
+2025-11-04 14:43:20.235 | find: '/proc/12/task/46/fdinfo': Permission denied
+2025-11-04 14:43:20.236 | find: '/proc/12/task/47/fdinfo': Permission denied
+2025-11-04 14:43:20.237 | find: '/proc/12/task/48/fdinfo': Permission denied
+2025-11-04 14:43:20.239 | find: '/proc/12/task/49/fdinfo': Permission denied
+2025-11-04 14:43:20.240 | find: '/proc/12/task/50/fdinfo': Permission denied
+2025-11-04 14:43:20.242 | find: '/proc/12/task/51/fdinfo': Permission denied
+2025-11-04 14:43:20.243 | find: '/proc/12/task/52/fdinfo': Permission denied
+2025-11-04 14:43:20.244 | find: '/proc/12/task/54/fdinfo': Permission denied
+2025-11-04 14:43:20.246 | find: '/proc/12/task/55/fdinfo': Permission denied
+2025-11-04 14:43:20.247 | find: '/proc/12/task/56/fdinfo': Permission denied
+2025-11-04 14:43:20.248 | find: '/proc/12/task/57/fdinfo': Permission denied
+2025-11-04 14:43:20.250 | find: '/proc/12/task/58/fdinfo': Permission denied
+2025-11-04 14:43:20.251 | find: '/proc/12/task/59/fdinfo': Permission denied
+2025-11-04 14:43:20.253 | find: '/proc/12/task/60/fdinfo': Permission denied
+2025-11-04 14:43:20.254 | find: '/proc/12/task/61/fdinfo': Permission denied
+2025-11-04 14:43:20.255 | find: '/proc/12/task/62/fdinfo': Permission denied
+2025-11-04 14:43:20.257 | find: '/proc/12/task/63/fdinfo': Permission denied
+2025-11-04 14:43:20.258 | find: '/proc/12/task/65/fdinfo': Permission denied
+2025-11-04 14:43:20.259 | find: '/proc/12/task/66/fdinfo': Permission denied
+2025-11-04 14:43:20.261 | find: '/proc/12/task/67/fdinfo': Permission denied
+2025-11-04 14:43:20.262 | find: '/proc/12/task/68/fdinfo': Permission denied
+2025-11-04 14:43:20.263 | find: '/proc/12/task/69/fdinfo': Permission denied
+2025-11-04 14:43:20.265 | find: '/proc/12/task/70/fdinfo': Permission denied
+2025-11-04 14:43:20.266 | find: '/proc/12/task/71/fdinfo': Permission denied
+2025-11-04 14:43:20.268 | find: '/proc/12/map_files': Permission denied
+2025-11-04 14:43:20.268 | find: '/proc/12/fdinfo': Permission denied
+2025-11-04 14:43:20.281 | find: '/proc/12/task/12/fdinfo': Permission denied
+2025-11-04 14:43:20.283 | find: '/proc/12/task/14/fdinfo': Permission denied
+2025-11-04 14:43:20.284 | find: '/proc/12/task/15/fdinfo': Permission denied
+2025-11-04 14:43:20.285 | find: '/proc/12/task/16/fdinfo': Permission denied
+2025-11-04 14:43:20.287 | find: '/proc/12/task/17/fdinfo': Permission denied
+2025-11-04 14:43:20.289 | find: '/proc/12/task/18/fdinfo': Permission denied
+2025-11-04 14:43:20.291 | find: '/proc/12/task/19/fdinfo': Permission denied
+2025-11-04 14:43:20.292 | find: '/proc/12/task/20/fdinfo': Permission denied
+2025-11-04 14:43:20.294 | find: '/proc/12/task/21/fdinfo': Permission denied
+2025-11-04 14:43:20.295 | find: '/proc/12/task/22/fdinfo': Permission denied
+2025-11-04 14:43:20.296 | find: '/proc/12/task/23/fdinfo': Permission denied
+2025-11-04 14:43:20.297 | find: '/proc/12/task/24/fdinfo': Permission denied
+2025-11-04 14:43:20.298 | find: '/proc/12/task/25/fdinfo': Permission denied
+2025-11-04 14:43:20.299 | find: '/proc/12/task/26/fdinfo': Permission denied
+2025-11-04 14:43:20.300 | find: '/proc/12/task/27/fdinfo': Permission denied
+2025-11-04 14:43:20.302 | find: '/proc/12/task/28/fdinfo': Permission denied
+2025-11-04 14:43:20.304 | find: '/proc/12/task/29/fdinfo': Permission denied
+2025-11-04 14:43:20.305 | find: '/proc/12/task/30/fdinfo': Permission denied
+2025-11-04 14:43:20.306 | find: '/proc/12/task/31/fdinfo': Permission denied
+2025-11-04 14:43:20.307 | find: '/proc/12/task/32/fdinfo': Permission denied
+2025-11-04 14:43:20.308 | find: '/proc/12/task/33/fdinfo': Permission denied
+2025-11-04 14:43:20.309 | find: '/proc/12/task/34/fdinfo': Permission denied
+2025-11-04 14:43:20.310 | find: '/proc/12/task/35/fdinfo': Permission denied
+2025-11-04 14:43:20.311 | find: '/proc/12/task/36/fdinfo': Permission denied
+2025-11-04 14:43:20.313 | find: '/proc/12/task/37/fdinfo': Permission denied
+2025-11-04 14:43:20.314 | find: '/proc/12/task/38/fdinfo': Permission denied
+2025-11-04 14:43:20.316 | find: '/proc/12/task/39/fdinfo': Permission denied
+2025-11-04 14:43:20.320 | find: '/proc/12/task/40/fdinfo': Permission denied
+2025-11-04 14:43:20.321 | find: '/proc/12/task/41/fdinfo': Permission denied
+2025-11-04 14:43:20.324 | find: '/proc/12/task/42/fdinfo': Permission denied
+2025-11-04 14:43:20.326 | find: '/proc/12/task/43/fdinfo': Permission denied
+2025-11-04 14:43:20.327 | find: '/proc/12/task/44/fdinfo': Permission denied
+2025-11-04 14:43:20.328 | find: '/proc/12/task/45/fdinfo': Permission denied
+2025-11-04 14:43:20.330 | find: '/proc/12/task/46/fdinfo': Permission denied
+2025-11-04 14:43:20.331 | find: '/proc/12/task/47/fdinfo': Permission denied
+2025-11-04 14:43:20.332 | find: '/proc/12/task/48/fdinfo': Permission denied
+2025-11-04 14:43:20.334 | find: '/proc/12/task/49/fdinfo': Permission denied
+2025-11-04 14:43:20.336 | find: '/proc/12/task/50/fdinfo': Permission denied
+2025-11-04 14:43:20.339 | find: '/proc/12/task/51/fdinfo': Permission denied
+2025-11-04 14:43:20.343 | find: '/proc/12/task/52/fdinfo': Permission denied
+2025-11-04 14:43:20.345 | find: '/proc/12/task/54/fdinfo': Permission denied
+2025-11-04 14:43:20.346 | find: '/proc/12/task/55/fdinfo': Permission denied
+2025-11-04 14:43:20.347 | find: '/proc/12/task/56/fdinfo': Permission denied
+2025-11-04 14:43:20.349 | find: '/proc/12/task/57/fdinfo': Permission denied
+2025-11-04 14:43:20.350 | find: '/proc/12/task/58/fdinfo': Permission denied
+2025-11-04 14:43:20.352 | find: '/proc/12/task/59/fdinfo': Permission denied
+2025-11-04 14:43:20.353 | find: '/proc/12/task/60/fdinfo': Permission denied
+2025-11-04 14:43:20.354 | find: '/proc/12/task/61/fdinfo': Permission denied
+2025-11-04 14:43:20.355 | find: '/proc/12/task/62/fdinfo': Permission denied
+2025-11-04 14:43:20.360 | find: '/proc/12/task/63/fdinfo': Permission denied
+2025-11-04 14:43:20.361 | find: '/proc/12/task/65/fdinfo': Permission denied
+2025-11-04 14:43:20.364 | find: '/proc/12/task/66/fdinfo': Permission denied
+2025-11-04 14:43:20.366 | find: '/proc/12/task/67/fdinfo': Permission denied
+2025-11-04 14:43:20.368 | find: '/proc/12/task/68/fdinfo': Permission denied
+2025-11-04 14:43:20.369 | find: '/proc/12/task/69/fdinfo': Permission denied
+2025-11-04 14:43:20.370 | find: '/proc/12/task/70/fdinfo': Permission denied
+2025-11-04 14:43:20.372 | find: '/proc/12/task/71/fdinfo': Permission denied
+2025-11-04 14:43:20.374 | find: '/proc/12/map_files': Permission denied
+2025-11-04 14:43:20.374 | find: '/proc/12/fdinfo': Permission denied
+2025-11-04 14:43:21.473 | timeout: failed to run command 'journalctl': No such file or directory
+2025-11-04 14:43:21.493 | timeout: failed to run command 'journalctl': No such file or directory
+2025-11-04 14:43:21.499 | Tue Nov  4 07:43:21 UTC 2025 Capturing program information
+2025-11-04 14:43:22.206 | Dump already generated: /var/opt/mssql/log/core.sqlservr.11_4_2025_7_43_0.12, moving to /var/opt/mssql/log/core.sqlservr.12.temp/core.sqlservr.12.gdmp
+2025-11-04 14:43:22.220 | Moving logs to /var/opt/mssql/log/core.sqlservr.12.temp/log/paldumper-debug.log
+2025-11-04 14:43:22.236 | Tue Nov  4 07:43:22 UTC 2025 Capturing program binaries
+2025-11-04 14:43:25.368 | chmod: changing permissions of '/var/opt/mssql/log': Operation not permitted
+2025-11-04 14:43:25.375 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d': Operation not permitted
+2025-11-04 14:43:25.385 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/bin': Operation not permitted
+2025-11-04 14:43:25.393 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/bin/sqlservr': Operation not permitted
+2025-11-04 14:43:25.399 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/crash.txt': Operation not permitted
+2025-11-04 14:43:25.403 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/etc': Operation not permitted
+2025-11-04 14:43:25.410 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/etc/crash_id.txt': Operation not permitted
+2025-11-04 14:43:25.414 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/etc/instance_id.txt': Operation not permitted
+2025-11-04 14:43:25.418 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/etc/version.txt': Operation not permitted
+2025-11-04 14:43:25.422 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/lib': Operation not permitted
+2025-11-04 14:43:25.428 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/lib/usr': Operation not permitted
+2025-11-04 14:43:25.435 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/lib/usr/lib': Operation not permitted
+2025-11-04 14:43:25.443 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/lib/usr/lib/x86_64-linux-gnu': Operation not permitted
+2025-11-04 14:43:25.452 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/lib/usr/lib/x86_64-linux-gnu/libthread_db.so.1': Operation not permitted
+2025-11-04 14:43:25.459 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/log': Operation not permitted
+2025-11-04 14:43:25.467 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/log/dmesg.tail.txt': Operation not permitted
+2025-11-04 14:43:25.471 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/log/filelist.txt': Operation not permitted
+2025-11-04 14:43:25.474 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/log/info.log': Operation not permitted
+2025-11-04 14:43:25.478 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/log/thread_information.log': Operation not permitted
+2025-11-04 14:43:25.484 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.json': Operation not permitted
+2025-11-04 14:43:25.487 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.txt': Operation not permitted
+2025-11-04 14:43:26.420 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_2_2025_10_0_50.12.log': Operation not permitted
+2025-11-04 14:43:26.785 | Tue Nov  4 07:43:26 UTC 2025 Not compressing the dump files, moving instead to: /var/opt/mssql/log/core.sqlservr.11_04_2025_07_43_18.12.d
+2025-11-04 14:44:02.094 | SQL Server 2022 will run as non-root by default.
+2025-11-04 14:44:02.095 | This container is running as user mssql.
+2025-11-04 14:44:02.095 | To learn more visit https://go.microsoft.com/fwlink/?linkid=2099216.
+2025-11-04 14:45:16.905 | ** ERROR: [AppLoader] Failed to load LSA: 0xc0070102
+2025-11-04 14:45:16.915 | AppLoader: Exiting with status=0xc0070102
+2025-11-04 14:45:16.915 | This program has encountered a fatal error and cannot continue running at Tue Nov  4 07:45:16 2025
+2025-11-04 14:45:16.915 | The following diagnostic information is available:
+2025-11-04 14:45:16.915 | 
+2025-11-04 14:45:16.915 |          Reason: 0x00000006
+2025-11-04 14:45:16.915 |         Message: Termination of \SystemRoot\system32\AppLoader.exe was due to fatal error 0xC0000001
+2025-11-04 14:45:16.915 |         Address: 0x3fffbce6a868
+2025-11-04 14:45:16.915 |     Stack Trace:
+2025-11-04 14:45:16.915 |                  file://package6/windows/system32/sqlpal.dll+0x0000000000209C12
+2025-11-04 14:45:16.915 |                  file://package6/windows/system32/sqlpal.dll+0x0000000000208156
+2025-11-04 14:45:16.915 |                  file://package6/windows/system32/sqlpal.dll+0x000000000026A9D0
+2025-11-04 14:45:16.915 |                  file://package6/windows/system32/sqlpal.dll+0x000000000026A868
+2025-11-04 14:45:16.915 |                  file://package6/windows/system32/sqlpal.dll+0x0000000000269296
+2025-11-04 14:45:16.915 |                  file://package6/windows/system32/sqlpal.dll+0x0000000000201F6E
+2025-11-04 14:45:16.915 |                  file://package6/windows/system32/sqlpal.dll+0x00000000003A02FB
+2025-11-04 14:45:16.915 |                  file:///windows/system32/ntdll.dll+0x00000000000F64AF
+2025-11-04 14:45:16.915 |                  file:///windows/system32/AppLoader.exe+0x0000000000002ED7
+2025-11-04 14:45:16.915 |                  file:///windows/system32/AppLoader.exe+0x000000000000301D
+2025-11-04 14:45:16.915 |                  file:///windows/system32/AppLoader.exe+0x000000000000303D
+2025-11-04 14:45:16.915 |                  file:///windows/system32/AppLoader.exe+0x000000000000A378
+2025-11-04 14:45:16.915 |                  file:///Windows/SYSTEM32/KERNEL32.DLL+0x0000000000017AF4
+2025-11-04 14:45:16.915 |                  file:///windows/system32/ntdll.dll+0x00000000000244A1
+2025-11-04 14:45:16.915 |         Process: 13 - sqlservr
+2025-11-04 14:45:16.915 |          Thread: 63 (application thread 0xc4)
+2025-11-04 14:45:16.916 |     Instance Id: 58eac966-2d7f-4a82-abaf-2b5a4a367acb
+2025-11-04 14:45:16.916 |        Crash Id: 121ff82c-8b00-4efc-b527-93b1652b1502
+2025-11-04 14:45:16.916 |     Build stamp: d7bafc6b0e42778633d72e5ac92bd37cabb7a668e87cd9af1a1e19fd0c89f66d
+2025-11-04 14:45:16.916 |    Distribution: Ubuntu 22.04.5 LTS
+2025-11-04 14:45:16.916 |      Processors: 8
+2025-11-04 14:45:16.916 |    Total Memory: 3775684608 bytes
+2025-11-04 14:45:16.916 |       Timestamp: Tue Nov  4 07:45:16 2025
+2025-11-04 14:45:16.951 | Capturing a dump of 13
+2025-11-04 14:45:38.446 | Successfully captured dump: /var/opt/mssql/log/core.sqlservr.11_4_2025_7_45_16.13
+2025-11-04 14:45:38.447 | Executing: /opt/mssql/bin/handle-crash.sh with parameters
+2025-11-04 14:45:38.447 |      handle-crash.sh
+2025-11-04 14:45:38.447 |      /opt/mssql/bin/sqlservr
+2025-11-04 14:45:38.447 |      13
+2025-11-04 14:45:38.447 |      /opt/mssql/bin
+2025-11-04 14:45:38.447 |      /var/opt/mssql/log/
+2025-11-04 14:45:38.447 |      
+2025-11-04 14:45:38.447 |      58eac966-2d7f-4a82-abaf-2b5a4a367acb
+2025-11-04 14:45:38.447 |      121ff82c-8b00-4efc-b527-93b1652b1502
+2025-11-04 14:45:38.447 |      
+2025-11-04 14:45:38.447 |      /var/opt/mssql/log/core.sqlservr.11_4_2025_7_45_16.13
+2025-11-04 14:45:38.477 | 
+2025-11-04 14:45:38.744 | Ubuntu 22.04.5 LTS
+2025-11-04 14:45:38.780 | Capturing core dump and information to /var/opt/mssql/log...
+2025-11-04 14:45:39.189 | /bin/cat: /proc/13/maps: Permission denied
+2025-11-04 14:45:40.192 | cat: /proc/13/environ: Permission denied
+2025-11-04 14:45:40.313 | find: '/proc/13/task/13/fdinfo': Permission denied
+2025-11-04 14:45:40.322 | find: '/proc/13/task/15/fdinfo': Permission denied
+2025-11-04 14:45:40.328 | find: '/proc/13/task/16/fdinfo': Permission denied
+2025-11-04 14:45:40.335 | find: '/proc/13/task/17/fdinfo': Permission denied
+2025-11-04 14:45:40.340 | find: '/proc/13/task/18/fdinfo': Permission denied
+2025-11-04 14:45:40.346 | find: '/proc/13/task/19/fdinfo': Permission denied
+2025-11-04 14:45:40.374 | find: '/proc/13/task/20/fdinfo': Permission denied
+2025-11-04 14:45:40.378 | find: '/proc/13/task/21/fdinfo': Permission denied
+2025-11-04 14:45:40.391 | find: '/proc/13/task/22/fdinfo': Permission denied
+2025-11-04 14:45:40.463 | find: '/proc/13/task/23/fdinfo': Permission denied
+2025-11-04 14:45:40.475 | find: '/proc/13/task/24/fdinfo': Permission denied
+2025-11-04 14:45:40.482 | find: '/proc/13/task/25/fdinfo': Permission denied
+2025-11-04 14:45:40.490 | find: '/proc/13/task/26/fdinfo': Permission denied
+2025-11-04 14:45:40.496 | find: '/proc/13/task/27/fdinfo': Permission denied
+2025-11-04 14:45:40.502 | find: '/proc/13/task/28/fdinfo': Permission denied
+2025-11-04 14:45:40.509 | find: '/proc/13/task/29/fdinfo': Permission denied
+2025-11-04 14:45:40.511 | find: '/proc/13/task/30/fdinfo': Permission denied
+2025-11-04 14:45:40.516 | find: '/proc/13/task/31/fdinfo': Permission denied
+2025-11-04 14:45:40.520 | find: '/proc/13/task/32/fdinfo': Permission denied
+2025-11-04 14:45:40.527 | find: '/proc/13/task/33/fdinfo': Permission denied
+2025-11-04 14:45:40.531 | find: '/proc/13/task/34/fdinfo': Permission denied
+2025-11-04 14:45:40.538 | find: '/proc/13/task/35/fdinfo': Permission denied
+2025-11-04 14:45:40.544 | find: '/proc/13/task/36/fdinfo': Permission denied
+2025-11-04 14:45:40.549 | find: '/proc/13/task/37/fdinfo': Permission denied
+2025-11-04 14:45:40.555 | find: '/proc/13/task/38/fdinfo': Permission denied
+2025-11-04 14:45:40.563 | find: '/proc/13/task/39/fdinfo': Permission denied
+2025-11-04 14:45:40.568 | find: '/proc/13/task/40/fdinfo': Permission denied
+2025-11-04 14:45:40.573 | find: '/proc/13/task/41/fdinfo': Permission denied
+2025-11-04 14:45:40.580 | find: '/proc/13/task/42/fdinfo': Permission denied
+2025-11-04 14:45:40.584 | find: '/proc/13/task/43/fdinfo': Permission denied
+2025-11-04 14:45:40.590 | find: '/proc/13/task/44/fdinfo': Permission denied
+2025-11-04 14:45:40.593 | find: '/proc/13/task/45/fdinfo': Permission denied
+2025-11-04 14:45:40.599 | find: '/proc/13/task/46/fdinfo': Permission denied
+2025-11-04 14:45:40.603 | find: '/proc/13/task/47/fdinfo': Permission denied
+2025-11-04 14:45:40.609 | find: '/proc/13/task/48/fdinfo': Permission denied
+2025-11-04 14:45:40.614 | find: '/proc/13/task/49/fdinfo': Permission denied
+2025-11-04 14:45:40.619 | find: '/proc/13/task/50/fdinfo': Permission denied
+2025-11-04 14:45:40.624 | find: '/proc/13/task/51/fdinfo': Permission denied
+2025-11-04 14:45:40.627 | find: '/proc/13/task/52/fdinfo': Permission denied
+2025-11-04 14:45:40.631 | find: '/proc/13/task/53/fdinfo': Permission denied
+2025-11-04 14:45:40.635 | find: '/proc/13/task/55/fdinfo': Permission denied
+2025-11-04 14:45:40.640 | find: '/proc/13/task/56/fdinfo': Permission denied
+2025-11-04 14:45:40.643 | find: '/proc/13/task/57/fdinfo': Permission denied
+2025-11-04 14:45:40.647 | find: '/proc/13/task/58/fdinfo': Permission denied
+2025-11-04 14:45:40.652 | find: '/proc/13/task/59/fdinfo': Permission denied
+2025-11-04 14:45:40.658 | find: '/proc/13/task/60/fdinfo': Permission denied
+2025-11-04 14:45:40.663 | find: '/proc/13/task/61/fdinfo': Permission denied
+2025-11-04 14:45:40.667 | find: '/proc/13/task/62/fdinfo': Permission denied
+2025-11-04 14:45:40.677 | find: '/proc/13/task/63/fdinfo': Permission denied
+2025-11-04 14:45:40.681 | find: '/proc/13/task/64/fdinfo': Permission denied
+2025-11-04 14:45:40.686 | find: '/proc/13/task/66/fdinfo': Permission denied
+2025-11-04 14:45:40.690 | find: '/proc/13/task/67/fdinfo': Permission denied
+2025-11-04 14:45:40.693 | find: '/proc/13/task/68/fdinfo': Permission denied
+2025-11-04 14:45:40.699 | find: '/proc/13/task/69/fdinfo': Permission denied
+2025-11-04 14:45:40.705 | find: '/proc/13/task/70/fdinfo': Permission denied
+2025-11-04 14:45:40.710 | find: '/proc/13/task/71/fdinfo': Permission denied
+2025-11-04 14:45:40.717 | find: '/proc/13/task/72/fdinfo': Permission denied
+2025-11-04 14:45:40.721 | find: '/proc/13/map_files': Permission denied
+2025-11-04 14:45:40.721 | find: '/proc/13/fdinfo': Permission denied
+2025-11-04 14:45:40.744 | find: '/proc/13/task/13/fdinfo': Permission denied
+2025-11-04 14:45:40.747 | find: '/proc/13/task/15/fdinfo': Permission denied
+2025-11-04 14:45:40.749 | find: '/proc/13/task/16/fdinfo': Permission denied
+2025-11-04 14:45:40.751 | find: '/proc/13/task/17/fdinfo': Permission denied
+2025-11-04 14:45:40.754 | find: '/proc/13/task/18/fdinfo': Permission denied
+2025-11-04 14:45:40.759 | find: '/proc/13/task/19/fdinfo': Permission denied
+2025-11-04 14:45:40.761 | find: '/proc/13/task/20/fdinfo': Permission denied
+2025-11-04 14:45:40.762 | find: '/proc/13/task/21/fdinfo': Permission denied
+2025-11-04 14:45:40.765 | find: '/proc/13/task/22/fdinfo': Permission denied
+2025-11-04 14:45:40.767 | find: '/proc/13/task/23/fdinfo': Permission denied
+2025-11-04 14:45:40.770 | find: '/proc/13/task/24/fdinfo': Permission denied
+2025-11-04 14:45:40.772 | find: '/proc/13/task/25/fdinfo': Permission denied
+2025-11-04 14:45:40.776 | find: '/proc/13/task/26/fdinfo': Permission denied
+2025-11-04 14:45:40.779 | find: '/proc/13/task/27/fdinfo': Permission denied
+2025-11-04 14:45:40.783 | find: '/proc/13/task/28/fdinfo': Permission denied
+2025-11-04 14:45:40.784 | find: '/proc/13/task/29/fdinfo': Permission denied
+2025-11-04 14:45:40.790 | find: '/proc/13/task/30/fdinfo': Permission denied
+2025-11-04 14:45:40.796 | find: '/proc/13/task/31/fdinfo': Permission denied
+2025-11-04 14:45:40.799 | find: '/proc/13/task/32/fdinfo': Permission denied
+2025-11-04 14:45:40.804 | find: '/proc/13/task/33/fdinfo': Permission denied
+2025-11-04 14:45:40.807 | find: '/proc/13/task/34/fdinfo': Permission denied
+2025-11-04 14:45:40.811 | find: '/proc/13/task/35/fdinfo': Permission denied
+2025-11-04 14:45:40.814 | find: '/proc/13/task/36/fdinfo': Permission denied
+2025-11-04 14:45:40.818 | find: '/proc/13/task/37/fdinfo': Permission denied
+2025-11-04 14:45:40.823 | find: '/proc/13/task/38/fdinfo': Permission denied
+2025-11-04 14:45:40.825 | find: '/proc/13/task/39/fdinfo': Permission denied
+2025-11-04 14:45:40.827 | find: '/proc/13/task/40/fdinfo': Permission denied
+2025-11-04 14:45:40.829 | find: '/proc/13/task/41/fdinfo': Permission denied
+2025-11-04 14:45:40.831 | find: '/proc/13/task/42/fdinfo': Permission denied
+2025-11-04 14:45:40.832 | find: '/proc/13/task/43/fdinfo': Permission denied
+2025-11-04 14:45:40.834 | find: '/proc/13/task/44/fdinfo': Permission denied
+2025-11-04 14:45:40.837 | find: '/proc/13/task/45/fdinfo': Permission denied
+2025-11-04 14:45:40.840 | find: '/proc/13/task/46/fdinfo': Permission denied
+2025-11-04 14:45:40.842 | find: '/proc/13/task/47/fdinfo': Permission denied
+2025-11-04 14:45:40.845 | find: '/proc/13/task/48/fdinfo': Permission denied
+2025-11-04 14:45:40.846 | find: '/proc/13/task/49/fdinfo': Permission denied
+2025-11-04 14:45:40.849 | find: '/proc/13/task/50/fdinfo': Permission denied
+2025-11-04 14:45:40.851 | find: '/proc/13/task/51/fdinfo': Permission denied
+2025-11-04 14:45:40.853 | find: '/proc/13/task/52/fdinfo': Permission denied
+2025-11-04 14:45:40.857 | find: '/proc/13/task/53/fdinfo': Permission denied
+2025-11-04 14:45:40.860 | find: '/proc/13/task/55/fdinfo': Permission denied
+2025-11-04 14:45:40.863 | find: '/proc/13/task/56/fdinfo': Permission denied
+2025-11-04 14:45:40.865 | find: '/proc/13/task/57/fdinfo': Permission denied
+2025-11-04 14:45:40.866 | find: '/proc/13/task/58/fdinfo': Permission denied
+2025-11-04 14:45:40.868 | find: '/proc/13/task/59/fdinfo': Permission denied
+2025-11-04 14:45:40.872 | find: '/proc/13/task/60/fdinfo': Permission denied
+2025-11-04 14:45:40.874 | find: '/proc/13/task/61/fdinfo': Permission denied
+2025-11-04 14:45:40.875 | find: '/proc/13/task/62/fdinfo': Permission denied
+2025-11-04 14:45:40.879 | find: '/proc/13/task/63/fdinfo': Permission denied
+2025-11-04 14:45:40.882 | find: '/proc/13/task/64/fdinfo': Permission denied
+2025-11-04 14:45:40.884 | find: '/proc/13/task/66/fdinfo': Permission denied
+2025-11-04 14:45:40.885 | find: '/proc/13/task/67/fdinfo': Permission denied
+2025-11-04 14:45:40.887 | find: '/proc/13/task/68/fdinfo': Permission denied
+2025-11-04 14:45:40.889 | find: '/proc/13/task/69/fdinfo': Permission denied
+2025-11-04 14:45:40.890 | find: '/proc/13/task/70/fdinfo': Permission denied
+2025-11-04 14:45:40.891 | find: '/proc/13/task/71/fdinfo': Permission denied
+2025-11-04 14:45:40.894 | find: '/proc/13/task/72/fdinfo': Permission denied
+2025-11-04 14:45:40.897 | find: '/proc/13/map_files': Permission denied
+2025-11-04 14:45:40.897 | find: '/proc/13/fdinfo': Permission denied
+2025-11-04 14:45:40.917 | find: '/proc/13/task/13/fdinfo': Permission denied
+2025-11-04 14:45:40.921 | find: '/proc/13/task/15/fdinfo': Permission denied
+2025-11-04 14:45:40.923 | find: '/proc/13/task/16/fdinfo': Permission denied
+2025-11-04 14:45:40.924 | find: '/proc/13/task/17/fdinfo': Permission denied
+2025-11-04 14:45:40.925 | find: '/proc/13/task/18/fdinfo': Permission denied
+2025-11-04 14:45:40.927 | find: '/proc/13/task/19/fdinfo': Permission denied
+2025-11-04 14:45:40.928 | find: '/proc/13/task/20/fdinfo': Permission denied
+2025-11-04 14:45:40.929 | find: '/proc/13/task/21/fdinfo': Permission denied
+2025-11-04 14:45:40.931 | find: '/proc/13/task/22/fdinfo': Permission denied
+2025-11-04 14:45:40.932 | find: '/proc/13/task/23/fdinfo': Permission denied
+2025-11-04 14:45:40.938 | find: '/proc/13/task/24/fdinfo': Permission denied
+2025-11-04 14:45:40.940 | find: '/proc/13/task/25/fdinfo': Permission denied
+2025-11-04 14:45:40.944 | find: '/proc/13/task/26/fdinfo': Permission denied
+2025-11-04 14:45:40.945 | find: '/proc/13/task/27/fdinfo': Permission denied
+2025-11-04 14:45:40.946 | find: '/proc/13/task/28/fdinfo': Permission denied
+2025-11-04 14:45:40.948 | find: '/proc/13/task/29/fdinfo': Permission denied
+2025-11-04 14:45:40.950 | find: '/proc/13/task/30/fdinfo': Permission denied
+2025-11-04 14:45:40.952 | find: '/proc/13/task/31/fdinfo': Permission denied
+2025-11-04 14:45:40.956 | find: '/proc/13/task/32/fdinfo': Permission denied
+2025-11-04 14:45:40.960 | find: '/proc/13/task/33/fdinfo': Permission denied
+2025-11-04 14:45:40.962 | find: '/proc/13/task/34/fdinfo': Permission denied
+2025-11-04 14:45:40.964 | find: '/proc/13/task/35/fdinfo': Permission denied
+2025-11-04 14:45:40.965 | find: '/proc/13/task/36/fdinfo': Permission denied
+2025-11-04 14:45:40.967 | find: '/proc/13/task/37/fdinfo': Permission denied
+2025-11-04 14:45:40.968 | find: '/proc/13/task/38/fdinfo': Permission denied
+2025-11-04 14:45:40.973 | find: '/proc/13/task/39/fdinfo': Permission denied
+2025-11-04 14:45:40.974 | find: '/proc/13/task/40/fdinfo': Permission denied
+2025-11-04 14:45:40.977 | find: '/proc/13/task/41/fdinfo': Permission denied
+2025-11-04 14:45:40.980 | find: '/proc/13/task/42/fdinfo': Permission denied
+2025-11-04 14:45:40.981 | find: '/proc/13/task/43/fdinfo': Permission denied
+2025-11-04 14:45:40.983 | find: '/proc/13/task/44/fdinfo': Permission denied
+2025-11-04 14:45:40.984 | find: '/proc/13/task/45/fdinfo': Permission denied
+2025-11-04 14:45:40.985 | find: '/proc/13/task/46/fdinfo': Permission denied
+2025-11-04 14:45:40.986 | find: '/proc/13/task/47/fdinfo': Permission denied
+2025-11-04 14:45:40.990 | find: '/proc/13/task/48/fdinfo': Permission denied
+2025-11-04 14:45:40.991 | find: '/proc/13/task/49/fdinfo': Permission denied
+2025-11-04 14:45:40.995 | find: '/proc/13/task/50/fdinfo': Permission denied
+2025-11-04 14:45:40.998 | find: '/proc/13/task/51/fdinfo': Permission denied
+2025-11-04 14:45:41.001 | find: '/proc/13/task/52/fdinfo': Permission denied
+2025-11-04 14:45:41.003 | find: '/proc/13/task/53/fdinfo': Permission denied
+2025-11-04 14:45:41.006 | find: '/proc/13/task/55/fdinfo': Permission denied
+2025-11-04 14:45:41.008 | find: '/proc/13/task/56/fdinfo': Permission denied
+2025-11-04 14:45:41.009 | find: '/proc/13/task/57/fdinfo': Permission denied
+2025-11-04 14:45:41.011 | find: '/proc/13/task/58/fdinfo': Permission denied
+2025-11-04 14:45:41.014 | find: '/proc/13/task/59/fdinfo': Permission denied
+2025-11-04 14:45:41.018 | find: '/proc/13/task/60/fdinfo': Permission denied
+2025-11-04 14:45:41.020 | find: '/proc/13/task/61/fdinfo': Permission denied
+2025-11-04 14:45:41.021 | find: '/proc/13/task/62/fdinfo': Permission denied
+2025-11-04 14:45:41.022 | find: '/proc/13/task/63/fdinfo': Permission denied
+2025-11-04 14:45:41.024 | find: '/proc/13/task/64/fdinfo': Permission denied
+2025-11-04 14:45:41.025 | find: '/proc/13/task/66/fdinfo': Permission denied
+2025-11-04 14:45:41.026 | find: '/proc/13/task/67/fdinfo': Permission denied
+2025-11-04 14:45:41.028 | find: '/proc/13/task/68/fdinfo': Permission denied
+2025-11-04 14:45:41.031 | find: '/proc/13/task/69/fdinfo': Permission denied
+2025-11-04 14:45:41.036 | find: '/proc/13/task/70/fdinfo': Permission denied
+2025-11-04 14:45:41.039 | find: '/proc/13/task/71/fdinfo': Permission denied
+2025-11-04 14:45:41.040 | find: '/proc/13/task/72/fdinfo': Permission denied
+2025-11-04 14:45:41.043 | find: '/proc/13/map_files': Permission denied
+2025-11-04 14:45:41.043 | find: '/proc/13/fdinfo': Permission denied
+2025-11-04 14:45:41.059 | find: '/proc/13/task/13/fdinfo': Permission denied
+2025-11-04 14:45:41.060 | find: '/proc/13/task/15/fdinfo': Permission denied
+2025-11-04 14:45:41.061 | find: '/proc/13/task/16/fdinfo': Permission denied
+2025-11-04 14:45:41.062 | find: '/proc/13/task/17/fdinfo': Permission denied
+2025-11-04 14:45:41.063 | find: '/proc/13/task/18/fdinfo': Permission denied
+2025-11-04 14:45:41.065 | find: '/proc/13/task/19/fdinfo': Permission denied
+2025-11-04 14:45:41.075 | find: '/proc/13/task/20/fdinfo': Permission denied
+2025-11-04 14:45:41.076 | find: '/proc/13/task/21/fdinfo': Permission denied
+2025-11-04 14:45:41.078 | find: '/proc/13/task/22/fdinfo': Permission denied
+2025-11-04 14:45:41.079 | find: '/proc/13/task/23/fdinfo': Permission denied
+2025-11-04 14:45:41.081 | find: '/proc/13/task/24/fdinfo': Permission denied
+2025-11-04 14:45:41.083 | find: '/proc/13/task/25/fdinfo': Permission denied
+2025-11-04 14:45:41.084 | find: '/proc/13/task/26/fdinfo': Permission denied
+2025-11-04 14:45:41.086 | find: '/proc/13/task/27/fdinfo': Permission denied
+2025-11-04 14:45:41.095 | find: '/proc/13/task/28/fdinfo': Permission denied
+2025-11-04 14:45:41.096 | find: '/proc/13/task/29/fdinfo': Permission denied
+2025-11-04 14:45:41.097 | find: '/proc/13/task/30/fdinfo': Permission denied
+2025-11-04 14:45:41.099 | find: '/proc/13/task/31/fdinfo': Permission denied
+2025-11-04 14:45:41.100 | find: '/proc/13/task/32/fdinfo': Permission denied
+2025-11-04 14:45:41.101 | find: '/proc/13/task/33/fdinfo': Permission denied
+2025-11-04 14:45:41.102 | find: '/proc/13/task/34/fdinfo': Permission denied
+2025-11-04 14:45:41.103 | find: '/proc/13/task/35/fdinfo': Permission denied
+2025-11-04 14:45:41.104 | find: '/proc/13/task/36/fdinfo': Permission denied
+2025-11-04 14:45:41.105 | find: '/proc/13/task/37/fdinfo': Permission denied
+2025-11-04 14:45:41.110 | find: '/proc/13/task/38/fdinfo': Permission denied
+2025-11-04 14:45:41.114 | find: '/proc/13/task/39/fdinfo': Permission denied
+2025-11-04 14:45:41.118 | find: '/proc/13/task/40/fdinfo': Permission denied
+2025-11-04 14:45:41.121 | find: '/proc/13/task/41/fdinfo': Permission denied
+2025-11-04 14:45:41.121 | find: '/proc/13/task/42/fdinfo': Permission denied
+2025-11-04 14:45:41.124 | find: '/proc/13/task/43/fdinfo': Permission denied
+2025-11-04 14:45:41.124 | find: '/proc/13/task/44/fdinfo': Permission denied
+2025-11-04 14:45:41.124 | find: '/proc/13/task/45/fdinfo': Permission denied
+2025-11-04 14:45:41.126 | find: '/proc/13/task/46/fdinfo': Permission denied
+2025-11-04 14:45:41.128 | find: '/proc/13/task/47/fdinfo': Permission denied
+2025-11-04 14:45:41.129 | find: '/proc/13/task/48/fdinfo': Permission denied
+2025-11-04 14:45:41.132 | find: '/proc/13/task/49/fdinfo': Permission denied
+2025-11-04 14:45:41.133 | find: '/proc/13/task/50/fdinfo': Permission denied
+2025-11-04 14:45:41.135 | find: '/proc/13/task/51/fdinfo': Permission denied
+2025-11-04 14:45:41.136 | find: '/proc/13/task/52/fdinfo': Permission denied
+2025-11-04 14:45:41.139 | find: '/proc/13/task/53/fdinfo': Permission denied
+2025-11-04 14:45:41.143 | find: '/proc/13/task/55/fdinfo': Permission denied
+2025-11-04 14:45:41.145 | find: '/proc/13/task/56/fdinfo': Permission denied
+2025-11-04 14:45:41.147 | find: '/proc/13/task/57/fdinfo': Permission denied
+2025-11-04 14:45:41.149 | find: '/proc/13/task/58/fdinfo': Permission denied
+2025-11-04 14:45:41.153 | find: '/proc/13/task/59/fdinfo': Permission denied
+2025-11-04 14:45:41.157 | find: '/proc/13/task/60/fdinfo': Permission denied
+2025-11-04 14:45:41.160 | find: '/proc/13/task/61/fdinfo': Permission denied
+2025-11-04 14:45:41.161 | find: '/proc/13/task/62/fdinfo': Permission denied
+2025-11-04 14:45:41.163 | find: '/proc/13/task/63/fdinfo': Permission denied
+2025-11-04 14:45:41.165 | find: '/proc/13/task/64/fdinfo': Permission denied
+2025-11-04 14:45:41.167 | find: '/proc/13/task/66/fdinfo': Permission denied
+2025-11-04 14:45:41.170 | find: '/proc/13/task/67/fdinfo': Permission denied
+2025-11-04 14:45:41.176 | find: '/proc/13/task/68/fdinfo': Permission denied
+2025-11-04 14:45:41.179 | find: '/proc/13/task/69/fdinfo': Permission denied
+2025-11-04 14:45:41.180 | find: '/proc/13/task/70/fdinfo': Permission denied
+2025-11-04 14:45:41.181 | find: '/proc/13/task/71/fdinfo': Permission denied
+2025-11-04 14:45:41.184 | find: '/proc/13/task/72/fdinfo': Permission denied
+2025-11-04 14:45:41.185 | find: '/proc/13/map_files': Permission denied
+2025-11-04 14:45:41.185 | find: '/proc/13/fdinfo': Permission denied
+2025-11-04 14:45:42.474 | timeout: failed to run command 'journalctl': No such file or directory
+2025-11-04 14:45:42.496 | timeout: failed to run command 'journalctl': No such file or directory
+2025-11-04 14:45:42.502 | Tue Nov  4 07:45:42 UTC 2025 Capturing program information
+2025-11-04 14:45:43.581 | Dump already generated: /var/opt/mssql/log/core.sqlservr.11_4_2025_7_45_16.13, moving to /var/opt/mssql/log/core.sqlservr.13.temp/core.sqlservr.13.gdmp
+2025-11-04 14:45:43.601 | Moving logs to /var/opt/mssql/log/core.sqlservr.13.temp/log/paldumper-debug.log
+2025-11-04 14:45:43.626 | Tue Nov  4 07:45:43 UTC 2025 Capturing program binaries
+2025-11-04 14:45:50.673 | chmod: changing permissions of '/var/opt/mssql/log': Operation not permitted
+2025-11-04 14:45:50.683 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d': Operation not permitted
+2025-11-04 14:45:50.694 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/bin': Operation not permitted
+2025-11-04 14:45:50.705 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/bin/sqlservr': Operation not permitted
+2025-11-04 14:45:50.710 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/crash.txt': Operation not permitted
+2025-11-04 14:45:50.717 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/etc': Operation not permitted
+2025-11-04 14:45:50.726 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/etc/crash_id.txt': Operation not permitted
+2025-11-04 14:45:50.732 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/etc/instance_id.txt': Operation not permitted
+2025-11-04 14:45:50.737 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/etc/version.txt': Operation not permitted
+2025-11-04 14:45:50.743 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/lib': Operation not permitted
+2025-11-04 14:45:50.752 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/lib/usr': Operation not permitted
+2025-11-04 14:45:50.767 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/lib/usr/lib': Operation not permitted
+2025-11-04 14:45:50.778 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/lib/usr/lib/x86_64-linux-gnu': Operation not permitted
+2025-11-04 14:45:50.793 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/lib/usr/lib/x86_64-linux-gnu/libthread_db.so.1': Operation not permitted
+2025-11-04 14:45:50.804 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/log': Operation not permitted
+2025-11-04 14:45:50.815 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/log/dmesg.tail.txt': Operation not permitted
+2025-11-04 14:45:50.820 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/log/filelist.txt': Operation not permitted
+2025-11-04 14:45:50.825 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/log/info.log': Operation not permitted
+2025-11-04 14:45:50.831 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.d/log/thread_information.log': Operation not permitted
+2025-11-04 14:45:50.838 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.json': Operation not permitted
+2025-11-04 14:45:50.842 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_02_2025_10_01_01.12.txt': Operation not permitted
+2025-11-04 14:45:53.735 | chmod: changing permissions of '/var/opt/mssql/log/core.sqlservr.11_2_2025_10_0_50.12.log': Operation not permitted
+2025-11-04 14:45:54.196 | Tue Nov  4 07:45:54 UTC 2025 Not compressing the dump files, moving instead to: /var/opt/mssql/log/core.sqlservr.11_04_2025_07_45_38.13.d
