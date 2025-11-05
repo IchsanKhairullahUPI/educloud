@@ -18,7 +18,7 @@ services:
       - educloud-net
 
   # ==========================
-  # MongoDB (for future analytics)
+  # MongoDB (for analytics or AI data)
   # ==========================
   mongo:
     image: mongo:7
@@ -34,7 +34,8 @@ services:
   # Auth Service
   # ==========================
   auth-service:
-    build: ./services/auth-service
+    build:
+      context: ./services/auth-service
     container_name: educloud-auth
     ports:
       - "8001:8000"
@@ -58,7 +59,8 @@ services:
   # Quiz Service
   # ==========================
   quiz-service:
-    build: ./services/quiz-service
+    build:
+      context: ./services/quiz-service
     container_name: educloud-quiz
     ports:
       - "8002:8000"
@@ -82,7 +84,8 @@ services:
   # Question Bank Service
   # ==========================
   qbank-service:
-    build: ./services/qbank-service
+    build:
+      context: ./services/qbank-service
     container_name: educloud-qbank
     ports:
       - "8003:8000"
@@ -101,6 +104,59 @@ services:
       - mssql
     networks:
       - educloud-net
+
+  # ==========================
+  # Media Service
+  # ==========================
+  media-service:
+    build:
+      context: ./services/media-service
+    container_name: educloud-media
+    ports:
+      - "8004:8000"
+    env_file:
+      - ./services/media-service/.env
+    volumes:
+      - ./services/media-service/uploads:/var/www/html/uploads
+    networks:
+      - educloud-net
+
+  # ==========================
+  # AI Question Generator Service
+  # ==========================
+  ai-generator-service:
+    build: ./services/ai-generator-service
+    container_name: educloud-ai-generator
+    ports:
+      - "8005:8000"
+    environment:
+      - APP_NAME=AIQuestionGenerator
+      - APP_ENV=local
+      - APP_KEY=base64:SomeRandomKey
+      - APP_DEBUG=true
+    networks:
+      - educloud-net
+
+  # ==========================
+  # Frontend 
+  # ==========================
+  frontend:
+    build:
+      context: ./frontend
+    container_name: educloud-frontend
+    ports:
+      - "8080:8000"
+    env_file:
+      - ./frontend/.env
+    depends_on:
+      - auth-service
+      - quiz-service
+      - qbank-service
+    networks:
+      - educloud-net
+    volumes:
+      - ./frontend:/var/www/html
+    command: php artisan serve --host=0.0.0.0 --port=8000
 
 networks:
   educloud-net:
