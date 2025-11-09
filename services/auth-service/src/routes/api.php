@@ -9,4 +9,4 @@ Route::get('/ping', function () {
         'service' => 'auth-service',
         'timestamp' => now()
     ]);
-});
+})->withoutMiddleware(['web', 'session']);

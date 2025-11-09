@@ -27,7 +27,7 @@ services:
     restart: unless-stopped
 
   # ==========================
-  # MongoDB (for future analytics)
+  # MongoDB (for analytics or AI data)
   # ==========================
   mongo:
     image: mongo:7
@@ -43,7 +43,8 @@ services:
   # Auth Service
   # ==========================
   auth-service:
-    build: ./services/auth-service
+    build:
+      context: ./services/auth-service
     container_name: educloud-auth
     ports:
       - "8001:8000"
@@ -67,7 +68,8 @@ services:
   # Quiz Service
   # ==========================
   quiz-service:
-    build: ./services/quiz-service
+    build:
+      context: ./services/quiz-service
     container_name: educloud-quiz
     ports:
       - "8002:8000"
@@ -91,7 +93,8 @@ services:
   # Question Bank Service
   # ==========================
   qbank-service:
-    build: ./services/qbank-service
+    build:
+      context: ./services/qbank-service
     container_name: educloud-qbank
     ports:
       - "8003:8000"
@@ -111,10 +114,102 @@ services:
     networks:
       - educloud-net
 
+  # ==========================
+  # Media Service
+  # ==========================
+  media-service:
+    build:
+      context: ./services/media-service
+    container_name: educloud-media
+    ports:
+      - "8004:8000"
+    env_file:
+      - ./services/media-service/.env
+    volumes:
+      - ./services/media-service/uploads:/var/www/html/uploads
+    networks:
+      - educloud-net
+
+  # ==========================
+  # AI Question Generator Service
+  # ==========================
+  ai-generator-service:
+    build: ./services/ai-generator-service
+    container_name: educloud-ai-generator
+    ports:
+      - "8005:8000"
+    environment:
+      - APP_NAME=AIQuestionGenerator
+      - APP_ENV=local
+      - APP_KEY=base64:SomeRandomKey
+      - APP_DEBUG=true
+    networks:
+      - educloud-net
+
+  # ==========================
+  # Frontend 
+  # ==========================
+  frontend:
+    build:
+      context: ./frontend
+    container_name: educloud-frontend
+    ports:
+      - "8080:8000"
+    env_file:
+      - ./frontend/.env
+    depends_on:
+      - auth-service
+      - quiz-service
+      - qbank-service
+    networks:
+      - educloud-net
+    volumes:
+      - ./frontend:/var/www/html
+    command: php artisan serve --host=0.0.0.0 --port=8000
+    
+# ==========================
+  # Redis (Cache & Session)
+  # ==========================
+  redis:
+    image: redis:7-alpine
+    container_name: educloud-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./databases/redis:/data
+    networks:
+      - educloud-net
+
+# ==========================
+  # Leaderboard Service
+  # ==========================
+  leaderboard-service:
+    build:
+      context: ./services/leaderboard-service
+    container_name: educloud-leaderboard
+    ports:
+      - "8006:8000" # Asumsi port internal 8000, eksternal 8006
+    environment:
+      - APP_NAME=LeaderboardService
+      - APP_ENV=local
+      - APP_DEBUG=true
+      - DB_CONNECTION=mongodb
+      - DB_HOST=mongo # Nama service MongoDB di docker-compose
+      - DB_PORT=27017
+      - DB_DATABASE=leaderboard_db
+      # Tambahkan env lain yang Anda perlukan
+    depends_on:
+      - mongo
+    networks:
+      - educloud-net
+      
 networks:
   educloud-net:
     driver: bridge
+<<<<<<< HEAD
     
 volumes:
   mssql_data:
     driver: local
+=======
+>>>>>>> 57748f1cc267de8eb939a329fd22267c2dba4f57

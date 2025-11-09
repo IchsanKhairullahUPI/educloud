@@ -1,0 +1,121 @@
+version: '3.9'
+
+services:
+  # ==========================
+  # Microsoft SQL Server
+  # ==========================
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: educloud-mssql
+    environment:
+      - ACCEPT_EULA=Y
+      # - MSSQL_SA_PASSWORD=YourStrong!Passw0rd
+      - SA_PASSWORD=YourStrong!Passw0rd
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql_data:/var/opt/mssql
+    networks:
+      - educloud-net
+
+  # ==========================
+  # MongoDB (for future analytics)
+  # ==========================
+  mongo:
+    image: mongo:7
+    container_name: educloud-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./databases/mongo:/data/db
+    networks:
+      - educloud-net
+
+  # ==========================
+  # Auth Service
+  # ==========================
+  auth-service:
+    build: ./services/auth-service
+    container_name: educloud-auth
+    ports:
+      - "8001:8000"
+    environment:
+      - CACHE_DRIVER=file
+      - SESSION_DRIVER=file
+      - QUEUE_CONNECTION=sync
+      - DB_ENCRYPT=no
+      - DB_TRUST_SERVER_CERTIFICATE=yes
+      - APP_NAME=AuthService
+      - APP_ENV=local
+      - APP_KEY=base64:SomeRandomKey
+      - APP_DEBUG=true
+      - DB_CONNECTION=sqlsrv
+      - DB_HOST=mssql
+      - DB_PORT=1433
+      - DB_DATABASE=auth_db
+      - DB_USERNAME=sa
+      - DB_PASSWORD=YourStrong!Passw0rd
+    depends_on:
+      - mssql
+    networks:
+      - educloud-net
+
+  # ==========================
+  # Quiz Service
+  # ==========================
+  quiz-service:
+    build: ./services/quiz-service
+    container_name: educloud-quiz
+    ports:
+      - "8002:8000"
+    environment:
+      - CACHE_DRIVER=file
+      - SESSION_DRIVER=file
+      - QUEUE_CONNECTION=sync
+      - DB_ENCRYPT=no
+      - DB_TRUST_SERVER_CERTIFICATE=yes
+      - APP_NAME=AuthService
+      - APP_ENV=local
+      - APP_KEY=base64:SomeRandomKey
+      - APP_DEBUG=true
+      - DB_CONNECTION=sqlsrv
+      - DB_HOST=mssql
+      - DB_PORT=1433
+      - DB_DATABASE=quiz_db
+      - DB_USERNAME=sa
+      - DB_PASSWORD=YourStrong!Passw0rd
+    depends_on:
+      - mssql
+    networks:
+      - educloud-net
+
+  # ==========================
+  # Question Bank Service
+  # ==========================
+  qbank-service:
+    build: ./services/qbank-service
+    container_name: educloud-qbank
+    ports:
+      - "8003:8000"
+    environment:
+      - APP_NAME=QBankService
+      - APP_ENV=local
+      - APP_KEY=base64:SomeRandomKey
+      - APP_DEBUG=true
+      - DB_CONNECTION=sqlsrv
+      - DB_HOST=mssql
+      - DB_PORT=1433
+      - DB_DATABASE=qbank_db
+      - DB_USERNAME=sa
+      - DB_PASSWORD=YourStrong!Passw0rd
+    depends_on:
+      - mssql
+    networks:
+      - educloud-net
+
+networks:
+  educloud-net:
+    driver: bridge
+    
+volumes:
+  mssql_data:
