@@ -1,10 +1,7 @@
 <?php
-require __DIR__ . '/../app/Http/Controllers/MediaController.php';
 
-use App\Http\Controllers\MediaController;
+use Illuminate\Support\Facades\Route;
 
-$controller = new MediaController();
-
-if ($_SERVER['REQUEST_METHOD'] === 'GET' && $_SERVER['REQUEST_URI'] === '/media') {
-    $controller->index();
-}
+Route::get('/', function () {
+    return view('welcome');
+});
