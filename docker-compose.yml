@@ -1,4 +1,4 @@
-# version: '3.9'
+version: '3.9'
 
 services:
   # ==========================
@@ -183,25 +183,25 @@ services:
 # ==========================
   # Leaderboard Service
   # ==========================
-  # leaderboard-service:
-  #   build:
-  #     context: ./services/leaderboard-service
-  #   container_name: educloud-leaderboard
-  #   ports:
-  #     - "8006:8000" # Asumsi port internal 8000, eksternal 8006
-  #   environment:
-  #     - APP_NAME=LeaderboardService
-  #     - APP_ENV=local
-  #     - APP_DEBUG=true
-  #     - DB_CONNECTION=mongodb
-  #     - DB_HOST=mongo # Nama service MongoDB di docker-compose
-  #     - DB_PORT=27017
-  #     - DB_DATABASE=leaderboard_db
-  #     # Tambahkan env lain yang Anda perlukan
-  #   depends_on:
-  #     - mongo
-  #   networks:
-  #     - educloud-net
+  leaderboard-service:
+    build:
+      context: ./services/leaderboard-service
+    container_name: educloud-leaderboard
+    ports:
+      - "8006:8000" # Asumsi port internal 8000, eksternal 8006
+    environment:
+      - APP_NAME=LeaderboardService
+      - APP_ENV=local
+      - APP_DEBUG=true
+      - DB_CONNECTION=mongodb
+      - DB_HOST=mongo # Nama service MongoDB di docker-compose
+      - DB_PORT=27017
+      - DB_DATABASE=leaderboard_db
+      # Tambahkan env lain yang Anda perlukan
+    depends_on:
+      - mongo
+    networks:
+      - educloud-net
       
 networks:
   educloud-net:
