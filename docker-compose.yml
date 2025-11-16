@@ -2,6 +2,25 @@ version: '3.9'
 
 services:
   # ==========================
+  # Traefik Reverse Proxy
+  # ==========================
+  traefik:
+    image: traefik:v3.0
+    container_name: traefik
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+    ports:
+      - "80:80"
+      - "8080:8080" # Traefik dashboard
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - educloud-net
+
+  # ==========================
   # Microsoft SQL Server
   # ==========================
   mssql:
@@ -27,7 +46,7 @@ services:
     restart: unless-stopped
 
   # ==========================
-  # MongoDB (for analytics or AI data)
+  # MongoDB
   # ==========================
   mongo:
     image: mongo:7
@@ -46,8 +65,6 @@ services:
     build:
       context: ./services/auth-service
     container_name: educloud-auth
-    ports:
-      - "8001:8000"
     environment:
       APP_NAME: AuthService
       APP_ENV: local
@@ -65,6 +82,12 @@ services:
       - mssql
     networks:
       - educloud-net
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.auth.rule=PathPrefix(`/auth`)"
+      - "traefik.http.services.auth.loadbalancer.server.port=8000"
+      - "traefik.http.middlewares.auth-strip.stripprefix.prefixes=/auth"
+      - "traefik.http.routers.auth.middlewares=auth-strip"
 
   # ==========================
   # Quiz Service
@@ -73,8 +96,6 @@ services:
     build:
       context: ./services/quiz-service
     container_name: educloud-quiz
-    ports:
-      - "8002:8000"
     environment:
       APP_NAME: QuizService
       APP_ENV: local
@@ -92,6 +113,12 @@ services:
       - mssql
     networks:
       - educloud-net
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.quiz.rule=PathPrefix(`/quiz`)"
+      - "traefik.http.services.quiz.loadbalancer.server.port=8000"
+      - "traefik.http.middlewares.quiz-strip.stripprefix.prefixes=/quiz"
+      - "traefik.http.routers.quiz.middlewares=quiz-strip"
 
   # ==========================
   # Question Bank Service
@@ -100,8 +127,6 @@ services:
     build:
       context: ./services/qbank-service
     container_name: educloud-qbank
-    ports:
-      - "8003:8000"
     environment:
       APP_NAME: QBankService
       APP_ENV: local
@@ -119,6 +144,12 @@ services:
       - mssql
     networks:
       - educloud-net
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.qbank.rule=PathPrefix(`/qbank`)"
+      - "traefik.http.services.qbank.loadbalancer.server.port=8000"
+      - "traefik.http.middlewares.qbank-strip.stripprefix.prefixes=/qbank"
+      - "traefik.http.routers.qbank.middlewares=qbank-strip"
 
   # ==========================
   # Media Service
@@ -127,23 +158,25 @@ services:
     build:
       context: ./services/media-service
     container_name: educloud-media
-    ports:
-      - "8004:8000"
     env_file:
       - ./services/media-service/.env
     volumes:
       - ./services/media-service/uploads:/var/www/html/uploads
     networks:
       - educloud-net
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.media.rule=PathPrefix(`/media`)"
+      - "traefik.http.services.media.loadbalancer.server.port=8000"
+      - "traefik.http.middlewares.media-strip.stripprefix.prefixes=/media"
+      - "traefik.http.routers.media.middlewares=media-strip"
 
   # ==========================
-  # AI Question Generator Service
+  # AI Generator Service
   # ==========================
   ai-generator-service:
     build: ./services/ai-generator-service
     container_name: educloud-ai-generator
-    ports:
-      - "8005:8000"
     environment:
       - APP_NAME=AIQuestionGenerator
       - APP_ENV=local
@@ -151,9 +184,15 @@ services:
       - APP_DEBUG=true
     networks:
       - educloud-net
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.ai.rule=PathPrefix(`/ai`)"
+      - "traefik.http.services.ai.loadbalancer.server.port=8000"
+      - "traefik.http.middlewares.ai-strip.stripprefix.prefixes=/ai"
+      - "traefik.http.routers.ai.middlewares=ai-strip"
 
   # ==========================
-  # Frontend 
+  # Frontend
   # ==========================
   frontend:
     build:
@@ -172,9 +211,9 @@ services:
     volumes:
       - ./frontend:/var/www/html
     command: php artisan serve --host=0.0.0.0 --port=8000
-    
-# ==========================
-  # Redis (Cache & Session)
+
+  # ==========================
+  # Redis
   # ==========================
   redis:
     image: redis:7-alpine
@@ -186,33 +225,36 @@ services:
     networks:
       - educloud-net
 
-# ==========================
-  # Leaderboard Service
+  # ==========================
+  # Leaderboard Service (MongoDB)
   # ==========================
   leaderboard-service:
     build:
       context: ./services/leaderboard-service
     container_name: educloud-leaderboard
-    ports:
-      - "8006:8000" # Asumsi port internal 8000, eksternal 8006
     environment:
       - APP_NAME=LeaderboardService
       - APP_ENV=local
       - APP_DEBUG=true
       - DB_CONNECTION=mongodb
-      - DB_HOST=mongo # Nama service MongoDB di docker-compose
+      - DB_HOST=mongo
       - DB_PORT=27017
       - DB_DATABASE=leaderboard_db
-      # Tambahkan env lain yang Anda perlukan
     depends_on:
       - mongo
     networks:
       - educloud-net
-      
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.leaderboard.rule=PathPrefix(`/leaderboard`)"
+      - "traefik.http.services.leaderboard.loadbalancer.server.port=8000"
+      - "traefik.http.middlewares.leaderboard-strip.stripprefix.prefixes=/leaderboard"
+      - "traefik.http.routers.leaderboard.middlewares=leaderboard-strip"
+
 networks:
   educloud-net:
     driver: bridge
-    
+
 volumes:
   mssql_data:
     driver: local
