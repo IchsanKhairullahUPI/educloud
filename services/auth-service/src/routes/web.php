@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
 
 Route::get('/', [AuthController::class, 'index']);
 
@@ -13,3 +14,5 @@ Route::get('/api/ping', function () {
         'timestamp' => now()
     ]);
 });
+
+Route::apiResource('/api/users', UserController::class)->withoutMiddleware(['web', 'session']);

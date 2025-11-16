@@ -25,14 +25,17 @@ RUN apt-get update && apt-get install -y curl gnupg2 \
        mssql-tools18 \
     && rm -rf /var/lib/apt/lists/*
 
-# Configure ODBC
+# Configure ODBC for SQL Server
 RUN echo "[ODBC Driver 18 for SQL Server]" > /etc/odbcinst.ini \
     && echo "Description=Microsoft ODBC Driver 18 for SQL Server" >> /etc/odbcinst.ini \
-    && echo "Driver=/opt/microsoft/msodbcsql18/lib64/libmsodbcsql-18.*.so.1.1" >> /etc/odbcinst.ini \
+    && echo "Driver=/opt/microsoft/msodbcsql18/lib64/libmsodbcsql-18.5.so.1.1" >> /etc/odbcinst.ini \
     && echo "UsageCount=1" >> /etc/odbcinst.ini \
-    && echo "Threading=1" >> /etc/odbcinst.ini \
-    && echo "TrustServerCertificate=yes" >> /etc/odbcinst.ini \
-    && echo "Encrypt=no" >> /etc/odbcinst.ini
+    && echo "[mssql]" > /etc/odbc.ini \
+    && echo "Driver=ODBC Driver 18 for SQL Server" >> /etc/odbc.ini \
+    && echo "Server=mssql,1433" >> /etc/odbc.ini \
+    && echo "Database=${DB_DATABASE}" >> /etc/odbc.ini \
+    && echo "Encrypt=no" >> /etc/odbc.ini \
+    && echo "TrustServerCertificate=yes" >> /etc/odbc.ini
 
 # Install PHP extensions
 RUN docker-php-ext-install pdo xml mbstring \

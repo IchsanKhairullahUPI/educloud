@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\QuestionController;
 
-Route::get('/ping', function () {
-    return response()->json(['message' => 'pong from qbank']);
-});
+Route::apiResource('questions', QuestionController::class);

@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('quiz_questions', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->string('password')->nullable(); // optional since we're not doing auth
+            $table->foreignId('quiz_id')->constrained('quizzes')->onDelete('cascade');
+            $table->integer('question_id'); // From question bank service
+            $table->integer('order')->nullable();
             $table->timestamps();
         });
     }
@@ -25,8 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
-        Schema::dropIfExists('password_reset_tokens');
-        Schema::dropIfExists('sessions');
+        Schema::dropIfExists('quiz_questions');
     }
 };
